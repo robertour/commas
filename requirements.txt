@@ -1,0 +1,7 @@
+django-cms
+#bootstrap-admin
+django-compressor
+django-filer
+cmsplugin-filer
+django-reversion
+pil
