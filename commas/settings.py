@@ -77,7 +77,7 @@ MEDIA_URL = "/media/"
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
 # STATIC_ROOT = ''
-STATIC_ROOT = os.path.join(PROJECT_PATH, "static")
+STATIC_ROOT = os.path.join(PROJECT_PATH, "../static/")
 
 
 # URL prefix for static files.
@@ -90,6 +90,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    os.path.join(PROJECT_PATH, "static"),
 )
 
 # List of finder classes that know how to find static files in
@@ -98,6 +99,7 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    'compressor.finders.CompressorFinder',
 )
 
 # Make this unique, and don't share it with anybody.
@@ -165,9 +167,12 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
+    # 'django_admin_bootstrapped',
+    'bootstrap_admin',
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+    'compressor',
     'cms',
     'mptt',
     'menus',
@@ -219,6 +224,12 @@ LOGGING = {
         },
     }
 }
+
+
+#Django Compressor
+COMPRESS_PRECOMPILERS = (
+    ('text/less', 'lessc {infile} {outfile}'),
+)
 
 # DJANGO CMS
 CMS_TEMPLATES = (
