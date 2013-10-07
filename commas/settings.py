@@ -186,8 +186,9 @@ INSTALLED_APPS = (
     'cms.plugins.snippet',
 #    'cms.plugins.teaser',
     'cms.plugins.text',
-#    'cms.plugins.video',
+    'cms.plugins.video',
     'cms.plugins.twitter',
+    'easy_thumbnails',
     'filer',
     'cmsplugin_filer_file',
     'cmsplugin_filer_folder',
@@ -235,6 +236,10 @@ COMPRESS_PRECOMPILERS = (
 CMS_TEMPLATES = (
     ('template_1.html', 'Template One'),
     ('template_2.html', 'Template Two'),
+    ('carousel.html', 'Carousel'),
+    ('grid3x1.html', 'Grid (3x1)'),
+    ('featurettes.html', 'Featurettes'),
+    ('jumbotron.html', 'Jumbotron'),
 )
 
 LANGUAGES = [

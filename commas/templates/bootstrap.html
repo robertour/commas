@@ -1,0 +1,111 @@
+{% load cms_tags sekizai_tags %}
+{% load compress %}
+{% load menu_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+
+    <title>Carousel Template for Bootstrap</title>
+
+    <!-- Bootstrap Less-->
+    {% if debug %}
+      <link rel="stylesheet/less" type="text/css" media="all" href="{{STATIC_URL}}less/custom.less" />
+      <script src="{{STATIC_URL}}js/less/less-1.4.1.min.js"></script>
+    {% else %}
+      {% compress css %}
+      <link rel="stylesheet" type="text/less" media="all" href="{{ STATIC_URL }}less/custom.less" />
+      {% endcompress %}
+    {% endif %}
+    {% render_block "css" %}
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+    <!--[if lt IE 9]>
+        <script src="{{STATIC_URL}}js/html5shiv.js"></script>
+        <script src="{{STATIC_URL}}js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="{{ STATIC_URL }}css/carousel.css" rel="stylesheet"> -->
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <div class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Project name</a>
+            </div>
+            <div class="navbar-collapse collapse">
+
+
+              <ul class="nav navbar-nav">
+
+              {% show_menu 0 100 100 100 "menu.html" %}
+<!--
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li>
+-->
+              </ul>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    {% block base_content %}{% endblock %}
+
+    <!-- FOOTER -->
+    <div class="container">
+        <footer>
+          <p class="pull-right"><a href="#">Back to top</a></p>
+          <p>&copy; 2013 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        </footer>
+    </div> <!-- container -->
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{{STATIC_URL}}js/bootstrap.min.js"></script>
+    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+    <script src="{{STATIC_URL}}js/holder.js"></script>
+
+  </body>
+</html>
+

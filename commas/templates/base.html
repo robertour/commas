@@ -7,14 +7,13 @@
     <title>Bootstrap 101 Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap Less-->
-
     {% if debug %}
-        <link rel="stylesheet/less" type="text/css" media="all" href="{{STATIC_URL}}less/custom.less" />
-        <script src="{{STATIC_URL}}js/less/less-1.4.1.min.js"></script>
+      <link rel="stylesheet/less" type="text/css" media="all" href="{{STATIC_URL}}less/custom.less" />
+      <script src="{{STATIC_URL}}js/less/less-1.4.1.min.js"></script>
     {% else %}
-        {% compress css %}
-        <link rel="stylesheet" type="text/less" media="all" href="{{ STATIC_URL }}less/custom.less" />
-        {% endcompress %}
+      {% compress css %}
+      <link rel="stylesheet" type="text/less" media="all" href="{{ STATIC_URL }}less/custom.less" />
+      {% endcompress %}
     {% endif %}
     {% render_block "css" %}
   </head>

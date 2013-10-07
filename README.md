@@ -30,7 +30,7 @@ Installation instructions
 
 5. You should be able to enable and disable it. The system prompt must change where you have it enable:
 
-        workon vl3
+        workon commas
         deactivate
 
 6. Clone the project it in your desired location:
@@ -41,7 +41,7 @@ Installation instructions
 7. Enter in the new location and update the virtual environment previously created:
 
         cd git/commas
-        workon vl3
+        workon commas
         pip install -U -r requirements.txt
 
 8. Create the database (tico-tico):
