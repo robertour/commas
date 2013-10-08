@@ -6,15 +6,19 @@
   <head>
     <title>Bootstrap 101 Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap Less-->
+      <link rel="stylesheet/less" type="text/css" media="all" href="{{STATIC_URL}}less/custom.less" />
+      <script src="{{STATIC_URL}}js/less-1.4.1.min.js"></script>
+
+    {% comment %}
     {% if debug %}
       <link rel="stylesheet/less" type="text/css" media="all" href="{{STATIC_URL}}less/custom.less" />
-      <script src="{{STATIC_URL}}js/less/less-1.4.1.min.js"></script>
+      <script src="{{STATIC_URL}}js/less-1.4.1.min.js"></script>
     {% else %}
       {% compress css %}
       <link rel="stylesheet" type="text/less" media="all" href="{{ STATIC_URL }}less/custom.less" />
       {% endcompress %}
     {% endif %}
+    {% endcomment %}
     {% render_block "css" %}
   </head>
   <body>

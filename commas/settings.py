@@ -63,7 +63,8 @@ USE_TZ = True
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
 # MEDIA_ROOT = ''
-MEDIA_ROOT = os.path.join(PROJECT_PATH, "media")
+# MEDIA_ROOT = os.path.join(PROJECT_PATH, "media")
+MEDIA_ROOT = os.path.normpath(os.path.join(os.path.dirname(__file__), '../../media/').replace('\\','/'))
 
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
@@ -77,7 +78,8 @@ MEDIA_URL = "/media/"
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
 # STATIC_ROOT = ''
-STATIC_ROOT = os.path.join(PROJECT_PATH, "../static/")
+# STATIC_ROOT = os.path.join(PROJECT_PATH, "../static/")
+STATIC_ROOT = os.path.normpath(os.path.join(os.path.dirname(__file__), '../../static/').replace('\\','/'))
 
 
 # URL prefix for static files.
@@ -113,6 +115,7 @@ TEMPLATE_LOADERS = (
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.core.context_processors.debug',
     'django.contrib.auth.context_processors.auth',
     'django.core.context_processors.i18n',
     'django.core.context_processors.request',
