@@ -15,10 +15,6 @@
 
     <!-- Bootstrap Less-->
 
-      <link rel="stylesheet/less" type="text/css" media="all" href="{{STATIC_URL}}less/custom.less" />
-      <script src="{{STATIC_URL}}js/less-1.4.1.min.js"></script>
-
-    {% comment %}
     {% if debug %}
       <link rel="stylesheet/less" type="text/css" media="all" href="{{STATIC_URL}}less/custom.less" />
       <script src="{{STATIC_URL}}js/less-1.4.1.min.js"></script>
@@ -27,7 +23,6 @@
       <link rel="stylesheet" type="text/less" media="all" href="{{ STATIC_URL }}less/custom.less" />
       {% endcompress %}
     {% endif %}
-    {% endcomment %}
 
     {% render_block "css" %}
 
@@ -66,7 +61,23 @@
         <div class="container">
           <section class="row">
             <div class="col-sm-4 logo">
-              <a href="http://commasindustry.com"><img class="img-responsive" src="{{ STATIC_URL }}img/logos/vertical-pink.png" /></a>
+            
+              <div class="left-bar">
+                  <a href="http://commasindustry.com"><img class="img-responsive" src="{{ STATIC_URL }}img/logos/vertical-pink.png" /></a>
+                  <div class="social-bar">
+                    <div class=row>
+                      <div class="col-xs-4 nosidepadding" >
+                        <img src="{{ STATIC_URL }}img/icons/commas/72px/facebook.png" /></a>
+                      </div>
+                      <div class="col-xs-4 nosidepadding" >
+                        <img src="{{ STATIC_URL }}img/icons/commas/72px/google+.png" /></a>
+                      </div>
+                      <div class="col-xs-4 nosidepadding" >
+                        <img src="{{ STATIC_URL }}img/icons/commas/72px/twitter.png" /></a>
+                      </div>
+                    </div>
+                  </div>
+              </div>
             </div>
             <div class="col-sm-8 video">
               <div class="flex-video widescreen"><iframe src="http://www.youtube.com/embed/UGtKGX8B9hU" frameborder="0" allowfullscreen=""></iframe></div>
@@ -77,6 +88,7 @@
 
 
     <div id="myCarousel" class="carousel slide">
+    <h1>What do our clients say?</h1>
       <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -88,28 +100,28 @@
         <div class="item active">
           <div class="container">
             <div class="carousel-caption">
-              <p>“Certainly this year’s Smart Set all dress the part, as an extension of their deep ambitions and distinctive personalities. Ooi Ying Nee truly understands the power of the personal trademark, as a publicist for a wide portfolio of tech companies and visual and performing artistes...” — Natasha Kraal, Editor’s Letter, Harper’s BAZAAR Malaysia June 2013.</p>
+              <p>“Certainly this year’s Smart Set all dress the part, as an extension of their deep ambitions and distinctive personalities. Ooi Ying Nee truly understands the power of the personal trademark, as a publicist for a wide portfolio of tech companies and visual and performing artistes...”<span class="client"> — Natasha Kraal, Editor’s Letter, Harper’s BAZAAR Malaysia June 2013.</span></p>
             </div>
           </div>
         </div>
         <div class="item">
           <div class="container">
             <div class="carousel-caption">
-              <p>“Ying and her team have represented our public relations interest in Malaysia, and I am pleased to say that they have done exceptionally well in meeting AMC/Sundance Channel Global's PR objectives. With a long schedule of programming across multiple markets, we require representatives that can quickly adapt to the way we disseminate information and press releases.” — Rob Hooper, Hey Jupiter UK Managing Director</p>
+              <p>“Ying and her team have represented our public relations interest in Malaysia, and I am pleased to say that they have done exceptionally well in meeting AMC/Sundance Channel Global's PR objectives. With a long schedule of programming across multiple markets, we require representatives that can quickly adapt to the way we disseminate information and press releases.”<span class="client"> — Rob Hooper, Hey Jupiter UK Managing Director</span></p>
             </div>
           </div>
         </div>
         <div class="item">
           <div class="container">
             <div class="carousel-caption">
-              <p>“Commas & Industry has been extremely supportive in striving to retain and enhance our market positioning. I am happy to say [Ying] is very attentive of our needs and is quick to respond with solutions when unexpected crises or opportunities arise.” — Vivian Tung, Head of Marcom, Tetap Tiara Sdn Bhd, developer and management team for Jaya One</p>
+              <p>“Commas & Industry has been extremely supportive in striving to retain and enhance our market positioning. I am happy to say [Ying] is very attentive of our needs and is quick to respond with solutions when unexpected crises or opportunities arise.”<span class="client"> — Vivian Tung, Head of Marcom, Tetap Tiara Sdn Bhd, developer and management team for Jaya One</span></p>
             </div>
           </div>
         </div>
         <div class="item">
           <div class="container">
             <div class="carousel-caption">
-              <p>“...Ying listened carefully to the brief and – unlike so many others – took time to respond with a plan that was genuinely tailored to our needs. She has great instincts and came up with a range of ideas (from a competition through to merchandise) which really impressed us – they were fresh, creative and turned out to be highly effective in communicating our messages to target users.” — Henry Playfoot, Stealth Education CEO</p>
+              <p>“...Ying listened carefully to the brief and – unlike so many others – took time to respond with a plan that was genuinely tailored to our needs. She has great instincts and came up with a range of ideas (from a competition through to merchandise) which really impressed us – they were fresh, creative and turned out to be highly effective in communicating our messages to target users.”<span class="client"> — Henry Playfoot, Stealth Education CEO</span></p>
             </div>
           </div>
         </div>

@@ -27,18 +27,37 @@ body {
   /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
   margin-top: -20px;
 }
+
+.carousel h1{
+text-align: center;
+font-size: 28px;
+}
+
+
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
-  top: 50px;
+  top: 30px;
   z-index: 10;
   color: @text-color;
   text-shadow: none;
+  padding-top: 0;
 }
+
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  height: 325px;
+  height: 275px;
 }
+
+.carousel .item .client{
+display: block;
+text-align: right;
+padding-top: 15px;
+font-size: 16px;
+color: lightgray;
+}
+
+
 .carousel-control.left, .carousel-control.right {
     #gradient > .horizontal(@start-color: rgba(0,0,0,0); @end-color: rgba(0,0,0,0))
 }
@@ -48,7 +67,7 @@ body {
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 350px;
+  height: 275px;
 }
 
 .carousel-control {

@@ -18,7 +18,8 @@
 // Brand colors
 // -------------------------
 
-@brand-primary:         @gray-dark;
+@brand-primary:         black; //@gray-dark;
+@brand-pink:            rgb(246,151,143);
 @brand-success:         #5cb85c;
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
@@ -240,6 +241,7 @@
 @navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
 
 // Navbar links
+//@navbar-link-color:                #777;
 @navbar-link-color:                #777;
 @navbar-link-hover-color:          #333;
 @navbar-link-hover-bg:             transparent;
@@ -262,13 +264,16 @@
 // Inverted navbar
 //
 // Reset inverted navbar basics
-@navbar-inverse-color:                      @gray-light;
+//@navbar-inverse-color:                      @gray-light;
+@navbar-inverse-color:                      @brand-pink;
 @navbar-inverse-bg:                         @brand-primary;
 @navbar-inverse-border:                     darken(@navbar-inverse-bg, 10%);
 
 // Inverted navbar links
-@navbar-inverse-link-color:                 @gray-light;
-@navbar-inverse-link-hover-color:           #fff;
+//@navbar-inverse-link-color:                 @gray-light;
+@navbar-inverse-link-color:                 #fff;
+//@navbar-inverse-link-hover-color:           #fff;
+@navbar-inverse-link-hover-color:                 @brand-pink;
 @navbar-inverse-link-hover-bg:              transparent;
 @navbar-inverse-link-active-color:          @navbar-inverse-link-hover-color;
 @navbar-inverse-link-active-bg:             @navbar-inverse-bg;

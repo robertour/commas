@@ -2,6 +2,6 @@
 *.pot
 *.pyc
 *.sqlite
-_prod.py
+*_prod.py
 /static
 local_settings.py
