@@ -14,16 +14,39 @@ padding: 0;
   border: 0;
 }
 
+.main-navbar {
+border-bottom: 10px solid @brand-pink;
+margin-bottom: 75px;
+}
+
 .home-navbar {
-padding-top: 20px;
+border-bottom: 0;
+margin-bottom: 0;
+}
+
+.pink-border {
+position: fixed;
+background-color: #f6978f;
+height:10px;
+z-index: 0;
+margin-top: -10px;
+width: 100%;
+}
+
+.navbar-spacer{
+height: 60px;
+position: relative;
+z-index: 1;
+background-color: @brand-primary;
 }
 
 .home-header {
-  background-color: @brand-primary;
-  height: 475px;
-  margin-top: -60px;
-  margin-bottom: 140px;
-  border-bottom: 10px solid @brand-pink;
+position: relative;
+z-index: 50;
+padding-top: 30px;
+background-color: #000000;
+margin-bottom: 75px;
+border-bottom: 10px solid #f6978f;
 }
 
 
@@ -32,7 +55,8 @@ padding-top: 20px;
 }
 
 .home-header .social-bar{
-margin-top: 135px;
+width: 75%;
+margin: 45px auto 0;
 }
 
 .home-header .social-bar img:hover{
@@ -44,16 +68,30 @@ filter:alpha(opacity=70);
 padding-left: 0;
 padding-right: 0;
 }
+
 .home-header .logo{ 
 }
 
 .home-header .video{ 
-margin-top: 85px;
+}
+
+#the-carousel {
+margin:0;
+}
+
+#grid {
+margin-top:100px;
+margin-bottom:100px;
+}
+
+#featurettes {
+margin-top:100px;
+margin-bottom:100px;
 }
 
 .footer {
 background-color: @brand-primary;
-padding: 40px 0 25px;
+padding: 25px 0 10px;
 border-top: 10px solid @brand-pink;
 }
 
@@ -62,7 +100,6 @@ border-top: 10px solid @brand-pink;
   padding-top: 25px;
   padding-bottom: 67.5%;
   height: 0;
-  margin-bottom: 16px;
   overflow: hidden;
 }
  

@@ -239,9 +239,10 @@ COMPRESS_PRECOMPILERS = (
 
 # DJANGO CMS
 CMS_TEMPLATES = (
-    ('template_1.html', 'Template One'),
-    ('template_2.html', 'Template Two'),
+#    ('template_1.html', 'Template One'),
+#    ('template_2.html', 'Template Two'),
     ('carousel.html', 'Carousel'),
+    ('jumbo.html', 'Jumbo'),
     ('grid3x1.html', 'Grid (3x1)'),
     ('featurettes.html', 'Featurettes'),
     ('jumbotron.html', 'Jumbotron'),

@@ -1,14 +1,11 @@
-{% extends "bootstrap.html" %}
+{% extends "base.html" %}
 {% load cms_tags %}
 
 {% block base_content %}
 
-    <div class="container marketing">
+    <div id="featurettes" class="container marketing base-content">
 
       <!-- START THE FEATURETTES -->
-
-      <hr class="featurette-divider">
-
       <div class="row featurette">
         <div class="col-md-7">
           <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
@@ -42,8 +39,6 @@
           <img class="featurette-image img-responsive" src="data:image/png;base64," data-src="holder.js/500x500/auto" alt="Generic placeholder image">
         </div>
       </div>
-
-      <hr class="featurette-divider">
 
       <!-- /END THE FEATURETTES -->
     </div><!-- /.container -->
