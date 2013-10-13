@@ -200,7 +200,8 @@ INSTALLED_APPS = (
     'cmsplugin_filer_image',
     'cmsplugin_filer_teaser',
     'cmsplugin_filer_video',
-    'reversion')
+    'reversion',
+    'myplugins')
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
@@ -241,11 +242,11 @@ COMPRESS_PRECOMPILERS = (
 CMS_TEMPLATES = (
 #    ('template_1.html', 'Template One'),
 #    ('template_2.html', 'Template Two'),
-    ('carousel.html', 'Carousel'),
-    ('jumbo.html', 'Jumbo'),
-    ('grid3x1.html', 'Grid (3x1)'),
-    ('featurettes.html', 'Featurettes'),
-    ('jumbotron.html', 'Jumbotron'),
+    ('blog.html', 'Blog'),
+    ('about.html', 'About'),
+    ('services.html', 'Services'),
+    ('credentials.html', 'Credentials'),
+    ('home.html', 'Home'),
 )
 
 LANGUAGES = [
