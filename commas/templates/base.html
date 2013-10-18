@@ -104,7 +104,8 @@
     <script src="{{STATIC_URL}}js/bootstrap.min.js"></script>
     <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
     <script src="{{STATIC_URL}}js/holder.js"></script>
-
+    
+    {% render_block "js" %}
   </body>
 </html>
 

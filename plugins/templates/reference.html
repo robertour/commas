@@ -1,0 +1,9 @@
+{% load cms_tags %}
+
+<div class="item {% if instance.active %}active{% endif %}">
+  <div class="container">
+    <div class="carousel-caption">
+      <p>“{{ instance.description }}”<span class="client"> — {{ instance.referee}}.</span></p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+@font-face {
+font-family: 'StRyde';
+src: url("../font/StRyde.otf") format("opentype");
+}
+
+
+body {
+font-family: 'StRyde';
+padding: 0;
+}
+
+.navbar{ 
+  border: 0;
+}
+
+.main-navbar {
+border-bottom: 10px solid @brand-pink;
+margin-bottom: 75px;
+}
+
+.home-navbar {
+border-bottom: 0;
+margin-bottom: 0;
+}
+
+.navbar-spacer{
+height: 60px;
+position: relative;
+z-index: 1;
+background-color: @brand-primary;
+}
+
+
+.footer {
+background-color: @brand-primary;
+padding: 25px 0 10px;
+border-top: 10px solid @brand-pink;
+}
+
+

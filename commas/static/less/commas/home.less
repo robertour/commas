@@ -1,29 +1,3 @@
-/* Move down content because we have a fixed navbar that is 50px tall */
-@font-face {
-font-family: 'StRyde';
-src: url("../font/StRyde.otf") format("opentype");
-}
-
-
-body {
-font-family: 'StRyde';
-padding: 0;
-}
-
-.navbar{ 
-  border: 0;
-}
-
-.main-navbar {
-border-bottom: 10px solid @brand-pink;
-margin-bottom: 75px;
-}
-
-.home-navbar {
-border-bottom: 0;
-margin-bottom: 0;
-}
-
 .pink-border {
 position: fixed;
 background-color: #f6978f;
@@ -31,13 +5,6 @@ height:10px;
 z-index: 0;
 margin-top: -10px;
 width: 100%;
-}
-
-.navbar-spacer{
-height: 60px;
-position: relative;
-z-index: 1;
-background-color: @brand-primary;
 }
 
 .home-header {
@@ -49,10 +16,11 @@ margin-bottom: 75px;
 border-bottom: 10px solid #f6978f;
 }
 
-
-.left-bar{
+.home-header .left-bar{
   width: 70%;
 }
+
+
 
 .home-header .social-bar{
 width: 75%;
@@ -73,26 +41,6 @@ padding-right: 0;
 }
 
 .home-header .video{ 
-}
-
-#the-carousel {
-margin:0;
-}
-
-#grid {
-margin-top:100px;
-margin-bottom:100px;
-}
-
-#featurettes {
-margin-top:100px;
-margin-bottom:100px;
-}
-
-.footer {
-background-color: @brand-primary;
-padding: 25px 0 10px;
-border-top: 10px solid @brand-pink;
 }
 
 .flex-video {

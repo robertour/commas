@@ -10,6 +10,19 @@ urlpatterns = i18n_patterns('',
     url(r'^', include('cms.urls')),
 )
 
+#from cms.sitemaps import CMSSitemap
+#from cmsplugin_blog.sitemaps import BlogSitemap
+
+#urlpatterns = patterns('',
+#    url(r'^sitemap.xml$', 'django.contrib.sitemaps.views.sitemap', {
+#        'sitemaps': {
+#            'cmspages': CMSSitemap,
+#            'blogentries': BlogSitemap
+#        }
+#    }),
+#    url(r'^', include('cms.urls'))
+#)
+
 if settings.DEBUG:
     urlpatterns = patterns('',
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve',

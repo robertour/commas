@@ -16,13 +16,19 @@ MANAGERS = ADMINS
 
 #DATABASES = {
 #    'default': {
-#        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-#        'NAME': '',                      # Or path to database file if using sqlite3.
+#        # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' 
+#        # or 'oracle'.
+#        'ENGINE': 'django.db.backends.', 
+#        # Or path to database file if using sqlite3.
+#        'NAME': '',
 #        # The following settings are not used with sqlite3:
 #        'USER': '',
 #        'PASSWORD': '',
-#        'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-#        'PORT': '',                      # Set to empty string for default.
+#        # Empty for localhost through domain sockets or 
+#        # '127.0.0.1' for localhost through TCP.
+#        'HOST': '',
+#        # Set to empty string for default.
+#        'PORT': '',
 #    }
 #}
 
@@ -66,7 +72,7 @@ USE_TZ = True
 # Example: "/var/www/example.com/media/"
 # MEDIA_ROOT = ''
 # MEDIA_ROOT = os.path.join(PROJECT_PATH, "media")
-MEDIA_ROOT = os.path.normpath(os.path.join(os.path.dirname(__file__), '../../media/').replace('\\','/'))
+MEDIA_ROOT = os.path.normpath(os.path.join(os.path.dirname(__file__), '../../media/').replace('\\', '/'))
 
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
@@ -81,7 +87,7 @@ MEDIA_URL = "/media/"
 # Example: "/var/www/example.com/static/"
 # STATIC_ROOT = ''
 # STATIC_ROOT = os.path.join(PROJECT_PATH, "../static/")
-STATIC_ROOT = os.path.normpath(os.path.join(os.path.dirname(__file__), '../../static/').replace('\\','/'))
+STATIC_ROOT = os.path.normpath(os.path.join(os.path.dirname(__file__), '../../static/').replace('\\', '/'))
 
 
 # URL prefix for static files.
@@ -102,7 +108,7 @@ STATICFILES_DIRS = (
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    # 'django.contrib.staticfiles.finders.DefaultStorageFinder',
     'compressor.finders.CompressorFinder',
 )
 
@@ -113,7 +119,7 @@ SECRET_KEY = '@tt9_5g15r023+-t(3oxqn%##x-86ql6m$x42n_os-cgr17o@)'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
+    # 'django.template.loaders.eggs.Loader',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -128,16 +134,13 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 MIDDLEWARE_CLASSES = (
-#    'django.middleware.common.CommonMiddleware',
-#    'django.contrib.sessions.middleware.SessionMiddleware',
-#    'django.middleware.csrf.CsrfViewMiddleware',
-#    'django.contrib.auth.middleware.AuthenticationMiddleware',
-#    'django.contrib.messages.middleware.MessageMiddleware',
+    #'django.middleware.common.CommonMiddleware',
+    #'django.contrib.sessions.middleware.SessionMiddleware',
+    #'django.middleware.csrf.CsrfViewMiddleware',
+    #'django.contrib.auth.middleware.AuthenticationMiddleware',
+    #'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    
-    
-    
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -149,7 +152,6 @@ MIDDLEWARE_CLASSES = (
     'cms.middleware.user.CurrentUserMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',
     'cms.middleware.language.LanguageCookieMiddleware',
-    
 )
 
 ROOT_URLCONF = 'commas.urls'
@@ -173,7 +175,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
     # 'django_admin_bootstrapped',
-   # 'bootstrap_admin',
+    # 'bootstrap_admin',
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
@@ -183,15 +185,22 @@ INSTALLED_APPS = (
     'menus',
     'south',
     'sekizai',
-#    'cms.plugins.file',
+#    'cmsplugin_blog',
+#    'djangocms_utils',
+#    'simple_translation',
+#    'tagging',
+    #'staticfiles',
+#    'missing',
+    # 'guardian', # Guardian for Blog!!!
+    #'cms.plugins.file',
     'cms.plugins.flash',
     'cms.plugins.googlemap',
     'cms.plugins.link',
-#    'cms.plugins.picture',
+    #'cms.plugins.picture',
     'cms.plugins.snippet',
-#    'cms.plugins.teaser',
+    #'cms.plugins.teaser',
     'cms.plugins.text',
-    'cms.plugins.video',
+    #'cms.plugins.video',
     'cms.plugins.twitter',
     'easy_thumbnails',
     'filer',
@@ -201,7 +210,7 @@ INSTALLED_APPS = (
     'cmsplugin_filer_teaser',
     'cmsplugin_filer_video',
     'reversion',
-    'myplugins')
+    'plugins')
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
@@ -240,8 +249,8 @@ COMPRESS_PRECOMPILERS = (
 
 # DJANGO CMS
 CMS_TEMPLATES = (
-#    ('template_1.html', 'Template One'),
-#    ('template_2.html', 'Template Two'),
+    #('template_1.html', 'Template One'),
+    #('template_2.html', 'Template Two'),
     ('blog.html', 'Blog'),
     ('about.html', 'About'),
     ('services.html', 'Services'),
@@ -249,6 +258,41 @@ CMS_TEMPLATES = (
     ('home.html', 'Home'),
 )
 
+CMS_PLACEHOLDER_CONF = {
+    'credential': {
+        "plugins": {'CredentialPlugin'}
+    },
+    'reference': {
+        "plugins": {'ReferencePlugin'}
+    },
+    'service': {
+        "plugins": {'ServicePlugin'}
+    },
+    'team': {
+        "plugins": {'TeamPlugin'}
+    },
+    'member': {
+        "plugins": {'MemberPlugin'}
+    },
+    'hometeaser': {
+        "plugins": {'FilerVideoPlugin', 
+        'FilerImagePlugin', 'TextPlugin'}
+    },
+}
+
 LANGUAGES = [
     ('en', 'English'),
 ]
+
+
+
+# For the Blog
+#CMSPLUGIN_BLOG_PLACEHOLDERS = ('first', 'second', 'third')
+#JQUERY_JS = 'https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js'
+#JQUERY_UI_JS = 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js'
+#JQUERY_UI_CSS = 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/themes/smoothness/jquery-ui.css'
+# Feed it locally
+#JQUERY_UI = '/path/to/jquery/'
+#JQUERY_JS = '%sjs/jquery-1.4.4.min.js' % JQUERY_UI
+#JQUERY_UI_JS = '%sjs/jquery-ui-1.8.9.custom.min.js' % JQUERY_UI
+#JQUERY_UI_CSS = '%scss/smoothness/jquery-ui-1.8.9.custom.css' % JQUERY_UI
