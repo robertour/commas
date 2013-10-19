@@ -7,8 +7,11 @@ admin.autodiscover()
 
 urlpatterns = i18n_patterns('',
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^weblog/', include('zinnia.urls')),
+    url(r'^comments/', include('django.contrib.comments.urls')),
     url(r'^', include('cms.urls')),
 )
+
 
 #from cms.sitemaps import CMSSitemap
 #from cmsplugin_blog.sitemaps import BlogSitemap

@@ -173,6 +173,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.comments',
     # Uncomment the next line to enable the admin:
     # 'django_admin_bootstrapped',
     # 'bootstrap_admin',
@@ -185,13 +186,6 @@ INSTALLED_APPS = (
     'menus',
     'south',
     'sekizai',
-#    'cmsplugin_blog',
-#    'djangocms_utils',
-#    'simple_translation',
-#    'tagging',
-    #'staticfiles',
-#    'missing',
-    # 'guardian', # Guardian for Blog!!!
     #'cms.plugins.file',
     'cms.plugins.flash',
     'cms.plugins.googlemap',
@@ -210,6 +204,9 @@ INSTALLED_APPS = (
     'cmsplugin_filer_teaser',
     'cmsplugin_filer_video',
     'reversion',
+    'tagging',
+    'zinnia',
+    'cmsplugin_zinnia',
     'plugins')
 
 # A sample logging configuration. The only tangible logging
@@ -251,7 +248,7 @@ COMPRESS_PRECOMPILERS = (
 CMS_TEMPLATES = (
     #('template_1.html', 'Template One'),
     #('template_2.html', 'Template Two'),
-    ('blog.html', 'Blog'),
+    ('zinnia/base.html', 'Zinnia Blog'),
     ('about.html', 'About'),
     ('services.html', 'Services'),
     ('credentials.html', 'Credentials'),
