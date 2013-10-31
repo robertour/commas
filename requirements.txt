@@ -7,4 +7,4 @@ django-reversion
 pil
 #-e git+https://github.com/fivethreeo/cmsplugin-blog.git#egg=cmsplugin-blog
 django-blog-zinnia
-cmsplugin_zinia
+cmsplugin_zinnia
