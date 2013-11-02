@@ -8,3 +8,5 @@ pil
 #-e git+https://github.com/fivethreeo/cmsplugin-blog.git#egg=cmsplugin-blog
 django-blog-zinnia
 cmsplugin_zinnia
+cmsplugin-contact
+django-widget-tweaks

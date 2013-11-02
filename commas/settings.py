@@ -55,6 +55,14 @@ TIME_ZONE = 'America/Chicago'
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'en-us'
 
+# Email for the contact form
+DEFAULT_FROM_EMAIL = 'testcommas@gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'testcommas@gmail.com'
+EMAIL_HOST_PASSWORD = 'discodisco'
+
 SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not
@@ -186,6 +194,7 @@ INSTALLED_APPS = (
     'menus',
     'south',
     'sekizai',
+		'widget_tweaks',
     #'cms.plugins.file',
     'cms.plugins.flash',
     'cms.plugins.googlemap',
@@ -207,6 +216,7 @@ INSTALLED_APPS = (
     'tagging',
     'zinnia',
     'cmsplugin_zinnia',
+    'cmsplugin_contact',
     'plugins')
 
 # A sample logging configuration. The only tangible logging
@@ -253,34 +263,37 @@ CMS_TEMPLATES = (
     ('services.html', 'Services'),
     ('credentials.html', 'Credentials'),
     ('home.html', 'Home'),
+    ('contact.html', 'Contact'),
 )
 
 CMS_PLACEHOLDER_CONF = {
     'credential': {
-        "plugins": {'CredentialPlugin'}
+        'plugins': {'CredentialPlugin'}
     },
     'reference': {
-        "plugins": {'ReferencePlugin'}
+        'plugins': {'ReferencePlugin'}
     },
     'service': {
-        "plugins": {'ServicePlugin'}
+        'plugins': {'ServicePlugin'}
     },
     'team': {
-        "plugins": {'TeamPlugin'}
+        'plugins': {'TeamPlugin'}
     },
     'member': {
-        "plugins": {'MemberPlugin'}
+        'plugins': {'MemberPlugin'}
     },
     'hometeaser': {
-        "plugins": {'FilerVideoPlugin', 
+        'plugins': {'FilerVideoPlugin', 
         'FilerImagePlugin', 'TextPlugin'}
+    },
+		'contactform': {
+				'plugins': ['ContactPlugin']
     },
 }
 
 LANGUAGES = [
     ('en', 'English'),
 ]
-
 
 
 # For the Blog
