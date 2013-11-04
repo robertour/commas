@@ -5186,6 +5186,9 @@ body {
   font-family: 'StRyde';
   padding: 0;
 }
+.base-content {
+  font-size: 16px;
+}
 .navbar {
   border: 0;
 }
@@ -5297,7 +5300,10 @@ body {
 }
 #featurettes {
   margin-top: 175px;
-  margin-bottom: 100px;
+  margin-bottom: 150px;
+}
+#featurettes hr.featurette-divider:last-of-type {
+  display: none;
 }
 .featurettes,
 .featurette-image {
@@ -5308,19 +5314,34 @@ body {
 }
 #services {
   margin-top: 150px;
-  margin-bottom: 75px;
+  margin-bottom: 100px;
+}
+#services .service {
+  padding-left: 25px;
+  padding-right: 25px;
 }
 #the-carousel {
   margin: 0;
 }
 #about {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 #about .jumbotron {
   padding-top: 150px;
+  font-size: 21px;
 }
-#grid {
-  margin-top: 100px;
+#members {
+  margin-top: 75px;
+}
+#members h1 {
+  text-align: center;
+}
+#members .member {
+  margin: 50px 0 75px;
+}
+#members .member .member-image {
+  max-width: 50%;
+  height: auto;
 }
 #id_subject {
   display: none;

@@ -1,9 +1,10 @@
 {% load cms_tags %}
 
-<div class="col-lg-4">
-  <img class="img-circle" src="data:image/png;base64," data-src="holder.js/140x140" alt="Generic placeholder image">
+<div class="col-lg-4 member">
+  <!--<img class="img-circle" src="data:image/png;base64," data-src="holder.js/140x140" alt="Generic placeholder image">-->
+  <img class="img-circle member-image" src="{{MEDIA_URL}}/{{instance.image}}" alt="Personal Picture" />
   <h2>{{ instance.name }}</h2>
   <p>{{ instance.description }}</p>
-  <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+  <!--<p><a class="btn btn-default" href="#">View details &raquo;</a></p> -->
 </div>
 
