@@ -43,7 +43,17 @@ INTERNAL_IPS = ['127.0.0.1', '216.185.102.18']
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    '.commasindustry.com', # Allow domain and subdomains
+    '.commasindustry.com.', # Also allow FQDN and subdomains
+    '.commasindustry.my', # Allow domain and subdomains
+    '.commasindustry.my.', # Also allow FQDN and subdomains
+    '.commas.webfactional.com', # Allow domain and subdomains
+    '.commas.webfactional.com.', # Also allow FQDN and subdomains
+]
+
+
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
