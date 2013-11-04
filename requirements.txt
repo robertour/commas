@@ -8,3 +8,5 @@ pil
 #-e git+https://github.com/fivethreeo/cmsplugin-blog.git#egg=cmsplugin-blog
 django-blog-zinnia
 cmsplugin_zinia
+django-app-namespace-template-loader
+zinnia-theme-bootstrap

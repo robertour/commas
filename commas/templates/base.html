@@ -2,14 +2,15 @@
 {% load compress %}
 {% load menu_tags %}
 {% load i18n %}
+{% load staticfiles %}
 {% load url from future %}
 <!DOCTYPE html>
 <html lang="{{ LANGUAGE_CODE }}">
   <head>
-    <title>Commas & Industry</title>
     <meta charset="utf-8">
+    <title>Commas & Industry</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{% block meta-description %}{% trans "Public Relations in Malaysia" %}</p>{% endblock %}" />
+    <meta name="description" content="{% block meta-description %}{% trans "Public Relations in Malaysia" %}{% endblock meta-description %}{% block meta-description-page %}{% endblock meta-description-page %}" />
     <meta name="author" content="{% block meta-author %}Ying Nee Ooi{% endblock %}">
     <meta name="keywords" content="{% block meta-keywords %}public relations, pr, Kuala Lumpur, Malaysia{% endblock %}" />
     <meta name="robots" content="follow, all" />
@@ -17,6 +18,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta http-equiv="cache-control" content="public" />
     {% block meta %}{% endblock %}
+
     <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon/pink.ico" />
     <link rel="icon" href="{{ STATIC_URL }}img/favicon/pink.ico" type="image/x-icon">
     <!-- Bootstrap Less-->
@@ -37,11 +39,29 @@
     <![endif]-->
     <!-- Custom styles for this template -->
     <!-- <link href="{{ STATIC_URL }}css/carousel.css" rel="stylesheet"> -->
+
+
+
+
+
+
+
+
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% static "zinnia_bootstrap/bootstrap/ico/apple-touch-icon-144-precomposed.png" %}" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{% static "zinnia_bootstrap/bootstrap/ico/apple-touch-icon-114-precomposed.png" %}" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% static "zinnia_bootstrap/bootstrap/ico/apple-touch-icon-72-precomposed.png" %}" />
+    <link rel="apple-touch-icon-precomposed" href="{% static "zinnia_bootstrap/bootstrap/ico/apple-touch-icon-57-precomposed.png" %}" />
+
+
+
+
+
     {% block extra_link %}{% endblock %}
     {% block link %}{% endblock %}
+    {% block extra_css %}{% endblock %}
     {% block script %}{% endblock %}
   </head>
-  <body>
+  <body class="zinnia {% block body-class %}{% endblock body-class %}" >
     {% cms_toolbar %}
     <div class="navbar navbar-inverse navbar-fixed-top main-navbar {% block navbar_class %}{% endblock %}">
       <div class="container">

@@ -117,6 +117,7 @@ SECRET_KEY = '@tt9_5g15r023+-t(3oxqn%##x-86ql6m$x42n_os-cgr17o@)'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
+    'app_namespace.Loader',
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
     # 'django.template.loaders.eggs.Loader',
@@ -181,6 +182,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'compressor',
+    'zinnia_bootstrap',
     'cms',
     'mptt',
     'menus',
