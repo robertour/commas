@@ -2,11 +2,13 @@
 {% load cms_tags %}
 
 {% block base_content %}
+<div id="about">
 {% placeholder team %}
-  <div id="grid" class="container marketing">
-    <!-- Example row of columns -->
-    <div class="row">
-      {% placeholder member %}
-    </div>
-  </div> <!-- /container -->
+<div id="members" class="container marketing">
+  <h1>Meet the team</h1>
+  <div class="row">
+    {% placeholder member %}
+  </div>
+</div> <!-- /container -->
+</div>
 {% endblock %}

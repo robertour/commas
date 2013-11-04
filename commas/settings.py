@@ -43,7 +43,17 @@ INTERNAL_IPS = ['127.0.0.1', '216.185.102.18']
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    '.commasindustry.com', # Allow domain and subdomains
+    '.commasindustry.com.', # Also allow FQDN and subdomains
+    '.commasindustry.my', # Allow domain and subdomains
+    '.commasindustry.my.', # Also allow FQDN and subdomains
+    '.commas.webfactional.com', # Allow domain and subdomains
+    '.commas.webfactional.com.', # Also allow FQDN and subdomains
+]
+
+
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -54,6 +64,14 @@ TIME_ZONE = 'America/Chicago'
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'en-us'
+
+# Email for the contact form
+DEFAULT_FROM_EMAIL = 'testcommas@gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'testcommas@gmail.com'
+EMAIL_HOST_PASSWORD = 'discodisco'
 
 SITE_ID = 1
 
@@ -188,6 +206,7 @@ INSTALLED_APPS = (
     'menus',
     'south',
     'sekizai',
+		'widget_tweaks',
     #'cms.plugins.file',
     'cms.plugins.flash',
     'cms.plugins.googlemap',
@@ -209,6 +228,7 @@ INSTALLED_APPS = (
     'tagging',
     'zinnia',
     'cmsplugin_zinnia',
+    'cmsplugin_contact',
     'plugins')
 
 # A sample logging configuration. The only tangible logging
@@ -255,34 +275,37 @@ CMS_TEMPLATES = (
     ('services.html', 'Services'),
     ('credentials.html', 'Credentials'),
     ('home.html', 'Home'),
+    ('contact.html', 'Contact'),
 )
 
 CMS_PLACEHOLDER_CONF = {
     'credential': {
-        "plugins": {'CredentialPlugin'}
+        'plugins': {'CredentialPlugin'}
     },
     'reference': {
-        "plugins": {'ReferencePlugin'}
+        'plugins': {'ReferencePlugin'}
     },
     'service': {
-        "plugins": {'ServicePlugin'}
+        'plugins': {'ServicePlugin'}
     },
     'team': {
-        "plugins": {'TeamPlugin'}
+        'plugins': {'TeamPlugin'}
     },
     'member': {
-        "plugins": {'MemberPlugin'}
+        'plugins': {'MemberPlugin'}
     },
     'hometeaser': {
-        "plugins": {'FilerVideoPlugin', 
+        'plugins': {'FilerVideoPlugin', 
         'FilerImagePlugin', 'TextPlugin'}
+    },
+		'contactform': {
+				'plugins': ['ContactPlugin']
     },
 }
 
 LANGUAGES = [
     ('en', 'English'),
 ]
-
 
 
 # For the Blog

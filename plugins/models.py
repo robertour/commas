@@ -35,3 +35,5 @@ class Team(CMSPlugin):
 class Member(CMSPlugin):
     name = models.CharField(max_length=100, default='Name')
     description = models.TextField(default='Description')
+    image = models.ImageField(upload_to='members', 
+        default='img/person-placeholder.jpg')

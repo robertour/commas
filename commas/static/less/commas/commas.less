@@ -10,8 +10,16 @@ font-family: 'StRyde';
 padding: 0;
 }
 
+.base-content {
+font-size: 16px;
+}
+
 .navbar{ 
   border: 0;
+}
+
+.navbar > .container {
+background-color: black;
 }
 
 .main-navbar {
@@ -19,10 +27,34 @@ border-bottom: 10px solid @brand-pink;
 margin-bottom: 75px;
 }
 
-.home-navbar {
-border-bottom: 0;
-margin-bottom: 0;
+.navbar .navbar-header {
+position: relative;
 }
+
+.navbar .navbar-brand{
+padding: 0;
+}
+
+.navbar .navbar-brand-ct{
+background-color: black;
+position: absolute;
+width: 135px;
+padding: 5px 15px 15px;
+text-align: center;
+margin-top: 0px;
+border: 10px solid #f6978f;
+border: 0 10px;
+}
+
+.navbar .navbar-brand-ct.bg {
+z-index: -1;
+}
+
+.navbar .navbar-brand-ct.fg {
+background-color: transparent;
+border-color: transparent;
+}
+
 
 .navbar-spacer{
 height: 60px;
