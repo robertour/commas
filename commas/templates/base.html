@@ -23,10 +23,13 @@
     {% if debug %}
       <link rel="stylesheet/less" type="text/css" media="all" href="{{STATIC_URL}}less/custom.less" />
       <script src="{{STATIC_URL}}js/less-1.4.1.min.js"></script>
-    {% else %}
-      {% compress css %}
+      <!--{% compress css %}
       <link rel="stylesheet" type="text/less" media="all" href="{{ STATIC_URL }}less/custom.less" />
-      {% endcompress %}
+      {% endcompress %}-->
+    {% else %}
+			{% addtoblock "css" %}
+			<link href="{{STATIC_URL}}css/commas.css" media="screen" rel="stylesheet" type="text/css" />
+			{% endaddtoblock %}
     {% endif %}
     {% render_block "css" %}
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
