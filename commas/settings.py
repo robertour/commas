@@ -200,7 +200,6 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'compressor',
-    'zinnia_bootstrap',
     'cms',
     'mptt',
     'menus',
@@ -226,6 +225,7 @@ INSTALLED_APPS = (
     'cmsplugin_filer_video',
     'reversion',
     'tagging',
+    'zinnia_bootstrap',
     'zinnia',
     'cmsplugin_zinnia',
     'cmsplugin_contact',

@@ -5,12 +5,7 @@
 {% block extra_link %}
     <link rel="pingback" href="/xmlrpc/" />
     <link rel="home" href="{% url 'zinnia_entry_archive_index' %}" />
-    <link rel="stylesheet" href="{% static "zinnia_bootstrap/bootstrap/css/bootstrap.css" %}" />
 
-    <link rel="stylesheet" href="{% static "zinnia_bootstrap/bootstrap/css/bootstrap-responsive.css" %}" />
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
     {% block link %}{% endblock %}
 {% endblock %}
 
@@ -22,17 +17,26 @@
     </style>
 {% endblock %}
 
+{% block body-class %}zinnia{% endblock body-class %}
 
 {% block base_content %}
-  <div class="zinnia {% block body-class %}{% endblock body-class %}">
-    <header class="navbar navbar-static-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <img src="{% static "zinnia_bootstrap/img/zinnia.png" %}" class="pull-left" alt="Zinnia's Weblog" />
-          <a href="{% url 'zinnia_entry_archive_index' %}" title="Zinnia's Weblog" class="brand" rel="home">
+
+    <nav class="navbar navbar-default navbar-static-top navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">{% trans "Toggle navigation" %}</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <img src="{% static "img/logos/horizontal-no_c-pink.png" %}" class="pull-left" alt="Zinnia's Weblog" />
+          <a href="{% url 'zinnia_entry_archive_index' %}" title="Zinnia's Welog" class="navbar-brand" rel="home">
             Zinnia's Weblog
           </a>
-          <ul class="nav pull-left">
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav navbar-left">
             {% url 'zinnia_category_list' as category_list_url %}
             <li {% if category_list_url in request.path %}class="active"{% endif %}>
               <a href="{{ category_list_url }}" title="{% trans "Category list" %}">
@@ -53,12 +57,18 @@
             </li>
             <li class="divider-vertical"></li>
           </ul>
-          <form method="get" action="{% url 'zinnia_entry_search' %}" class="navbar-search pull-left">
-            <input type="text" class="search-query" placeholder="{% trans 'Search' %}" name="pattern" value="{{ pattern }}" />
+          <form method="get" action="{% url 'zinnia_entry_search' %}" class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="search-query form-control" placeholder="{% trans 'Search' %}" name="pattern" value="{{ pattern }}" />
+            </div>
+            <button type="submit" name="submit" class="btn btn-default btn-sm">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
           </form>
-          <ul class="nav pull-right">
+          <ul class="nav navbar-nav navbar-right">
             {% url 'zinnia_sitemap' as sitemap_url %}
-            <li {% if sitemap_url in request.path %}class="active"{% endif %}>
+            <li {% if sitemap in request.path %}class="active"{% endif %}>
+            <li>
               <a href="{{ sitemap_url }}" title="{% trans "Sitemap" %}" class="sitemap">
                 {% trans "Sitemap" %}
               </a>
@@ -72,14 +82,12 @@
           </ul>
         </div>
       </div>
-    </header>
-    <div class="container">
-      {% block breadcrumbs %}{% endblock %}
-    </div>
+    </nav>
     {% block slider %}{% endblock %}
     <div class="container">
       <div class="row">
-        <div id="content" class="hfeed span8">
+        <div id="content" class="hfeed col-xs-12 col-sm-8 col-md-8 col-lg-8">
+          {% block breadcrumbs %}{% endblock %}
           {% block content %}
           <div class="links">
             <h3>{% trans "Useful links" %}</h3>
@@ -102,13 +110,14 @@
           </div>
           {% endblock content %}
         </div>
-        <div id="sidebar" class="span4">
+        <div id="sidebar" class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
           {% block sidebar %}
           {% endblock sidebar %}
         </div>
       </div>
-    </div>
+
     <footer class="container">
       <p>{% blocktrans %}Powered by <a href="http://www.djangoproject.com">Django</a> and <a href="https://github.com/Fantomas42/django-blog-zinnia">Zinnia {{ ZINNIA_VERSION }}</a>.{% endblocktrans %}</p>
     </footer>
+  </div>
 {% endblock %}

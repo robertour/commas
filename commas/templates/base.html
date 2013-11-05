@@ -29,9 +29,9 @@
       <link rel="stylesheet" type="text/less" media="all" href="{{ STATIC_URL }}less/custom.less" />
       {% endcompress %} {% endcomment %}
     {% else %}
-			{% addtoblock "css" %}
-			<link href="{{STATIC_URL}}css/commas.css" media="screen" rel="stylesheet" type="text/css" />
-			{% endaddtoblock %}
+      {% addtoblock "css" %}
+      <link href="{{STATIC_URL}}css/commas.css" media="screen" rel="stylesheet" type="text/css" />
+      {% endaddtoblock %}
     {% endif %}
     {% render_block "css" %}
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -64,7 +64,7 @@
     {% block extra_css %}{% endblock %}
     {% block script %}{% endblock %}
   </head>
-  <body class="zinnia {% block body-class %}{% endblock body-class %}" >
+  <body class="{% block body-class %}normal{% endblock body-class %}" >
     {% cms_toolbar %}
     <div class="navbar navbar-inverse navbar-fixed-top main-navbar {% block navbar_class %}{% endblock %}">
       <div class="container">
@@ -74,11 +74,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-					<div class="navbar-brand-ct bg">
-          	<a class="navbar-brand" href="http://commasindustry.com"><img class="img-responsive" src="{{ STATIC_URL }}img/logos/vertical-gray.png" /></a>
+          <div class="navbar-brand-ct bg">
+            <a class="navbar-brand" href="http://commasindustry.com"><img class="img-responsive" src="{{ STATIC_URL }}img/logos/vertical-gray.png" /></a>
           </div>
-					<div class="navbar-brand-ct fg">
-          	<a class="navbar-brand" href="http://commasindustry.com"><img class="img-responsive" src="{{ STATIC_URL }}img/logos/vertical-pink.png" /></a>
+          <div class="navbar-brand-ct fg">
+            <a class="navbar-brand" href="http://commasindustry.com"><img class="img-responsive" src="{{ STATIC_URL }}img/logos/vertical-pink.png" /></a>
           </div>
         </div>
 
@@ -103,7 +103,7 @@
                   <p>Email: hello@commasindustry.com<p/>
                 </div>
                 <div class="col-sm-8">
-									{% show_placeholder "contactform" "contact" %}
+                  {% show_placeholder "contactform" "contact" %}
                   <!--<form class="form-horizontal" role="form">
                     <div class="form-group">
                       <label for="inputEmail1" class="col-lg-2 control-label">Email</label>
