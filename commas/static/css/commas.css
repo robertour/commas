@@ -5222,6 +5222,10 @@ body {
   background-color: transparent;
   border-color: transparent;
 }
+.brand-horizontal {
+  margin-top: 12px;
+  width: 200px;
+}
 .navbar-spacer {
   height: 60px;
   position: relative;
@@ -5268,7 +5272,8 @@ body {
   padding-left: 0;
   padding-right: 0;
 }
-.home-navbar .navbar-brand-ct {
+.home-navbar .navbar-brand-ct,
+.home-navbar .brand-horizontal {
   display: none;
 }
 .flex-video {
@@ -5299,8 +5304,8 @@ body {
   }
 }
 #featurettes {
-  margin-top: 175px;
-  margin-bottom: 150px;
+  margin-top: 125px;
+  margin-bottom: 125px;
 }
 #featurettes hr.featurette-divider:last-of-type {
   display: none;
@@ -5313,21 +5318,21 @@ body {
   padding-top: 0;
 }
 #services {
-  margin-top: 150px;
-  margin-bottom: 100px;
+  margin-top: 125px;
+  margin-bottom: 125px;
 }
 #services .service {
   padding-left: 25px;
   padding-right: 25px;
 }
-#the-carousel {
-  margin: 0;
+#blog {
+  margin-top: 50px;
 }
 #about {
   margin-bottom: 50px;
 }
 #about .jumbotron {
-  padding-top: 150px;
+  padding-top: 125px;
   font-size: 21px;
 }
 #members {
