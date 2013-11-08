@@ -205,7 +205,7 @@ INSTALLED_APPS = (
     'menus',
     'south',
     'sekizai',
-		'widget_tweaks',
+    'widget_tweaks',
     #'cms.plugins.file',
     'cms.plugins.flash',
     'cms.plugins.googlemap',
@@ -225,6 +225,7 @@ INSTALLED_APPS = (
     'cmsplugin_filer_video',
     'reversion',
     'tagging',
+#    'tinymce',
     'zinnia_bootstrap',
     'zinnia',
     'cmsplugin_zinnia',
@@ -298,15 +299,38 @@ CMS_PLACEHOLDER_CONF = {
         'plugins': {'FilerVideoPlugin', 
         'FilerImagePlugin', 'TextPlugin'}
     },
-		'contactform': {
-				'plugins': ['ContactPlugin']
+    'contactform': {
+        'plugins': ['ContactPlugin']
     },
+    'content': {
+        'plugins': {'FilerVideoPlugin', 'FilerFilePlugin',
+        'FilerImagePlugin', 'TextPlugin'}
+    }
 }
 
 LANGUAGES = [
     ('en', 'English'),
 ]
 
+THUMBNAIL_PROCESSORS = (
+    'easy_thumbnails.processors.colorspace',
+    'easy_thumbnails.processors.autocrop',
+    #'easy_thumbnails.processors.scale_and_crop',
+    'filer.thumbnail_processors.scale_and_crop_with_subject_location',
+    'easy_thumbnails.processors.filters',
+)
+
+ZINNIA_ENTRY_BASE_MODEL = 'cmsplugin_zinnia.placeholder.EntryPlaceholder'
+
+
+TINYMCE_DEFAULT_CONFIG = {
+    'theme' : "advanced",
+    'mode' : "textareas",
+    'relative_urls': False
+}
+#TINYMCE_JS_URL = os.path.join(MEDIA_ROOT, "js/tiny_mce/tiny_mce.js")
+#TINYMCE_JS_ROOT = os.path.join(STATIC_ROOT, "js/tiny_mce")
+#TINYMCE_COMPRESSOR = True
 
 # For the Blog
 #CMSPLUGIN_BLOG_PLACEHOLDERS = ('first', 'second', 'third')
