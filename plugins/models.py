@@ -34,6 +34,10 @@ class Team(CMSPlugin):
 
 class Member(CMSPlugin):
     name = models.CharField(max_length=100, default='Name')
-    description = models.TextField(default='Description')
+    title = models.CharField(max_length=100, default='Job Title')
+    description = models.TextField(default='Description',
+        verbose_name="Bios")
+    twitter = models.URLField(max_length=200, default='http://twitter.com',
+        verbose_name="Twitter URL")
     image = models.ImageField(upload_to='members', 
         default='img/person-placeholder.jpg')

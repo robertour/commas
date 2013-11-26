@@ -3,8 +3,10 @@
 <div class="col-lg-4 member">
   <!--<img class="img-circle" src="data:image/png;base64," data-src="holder.js/140x140" alt="Generic placeholder image">-->
   <img class="img-circle member-image" src="{{MEDIA_URL}}/{{instance.image}}" alt="Personal Picture" />
-  <h2>{{ instance.name }}</h2>
+  <h2>{{ instance.name }} </h2>
+  <h3>{{ instance.title }}</h3>
   <p>{{ instance.description }}</p>
+  <a href="{{ instance.twitter }}"><img id="twitter" src="{{ STATIC_URL }}img/icons/commas/72px/twitter-blue.png" /></a>
   <!--<p><a class="btn btn-default" href="#">View details &raquo;</a></p> -->
 </div>
 
