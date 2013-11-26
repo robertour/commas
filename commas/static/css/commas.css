@@ -5370,6 +5370,10 @@ color: #F6978F;
   max-width: 50%;
   height: auto;
 }
+#twitter {
+  width: 32px;
+  margin-top: 14px;
+}
 #id_subject {
   display: none;
 }
