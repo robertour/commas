@@ -5276,6 +5276,9 @@ body {
 .home-navbar .brand-horizontal {
   display: none;
 }
+.home-header .right {
+  float: right;
+}
 .flex-video {
   position: relative;
   padding-top: 25px;
@@ -5326,7 +5329,7 @@ body {
   padding-right: 25px;
 }
 #blog {
-  margin-top: 50px;
+  margin-top: 100px;
   margin-bottom: 50px;
 }
 #blog #sidebar .panel-default {
@@ -5365,6 +5368,7 @@ color: #F6978F;
 }
 #members .member {
   margin: 50px 0 75px;
+  min-height: 450px;
 }
 #members .member .member-image {
   max-width: 50%;
