@@ -4,7 +4,7 @@ django-compressor
 django-filer
 cmsplugin-filer
 django-reversion
-pil
+pillow
 #-e git+https://github.com/fivethreeo/cmsplugin-blog.git#egg=cmsplugin-blog
 django-blog-zinnia
 cmsplugin_zinnia

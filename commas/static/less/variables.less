@@ -73,9 +73,9 @@
 @line-height-large:              1.33;
 @line-height-small:              1.5;
 
-@border-radius-base:             4px;
-@border-radius-large:            6px;
-@border-radius-small:            3px;
+@border-radius-base:             0px;
+@border-radius-large:            0px;
+@border-radius-small:            0px;
 
 @component-active-bg:            @brand-primary;
 
@@ -101,9 +101,9 @@
 
 @btn-font-weight:                bold;
 
-@btn-default-color:              #333;
+@btn-default-color:              @text-color;
 @btn-default-bg:                 #fff;
-@btn-default-border:             #ccc;
+@btn-default-border:             @brand-primary;
 
 @btn-primary-color:              #fff;
 @btn-primary-bg:                 @brand-primary;
@@ -271,12 +271,12 @@
 
 // Inverted navbar links
 //@navbar-inverse-link-color:                 @gray-light;
-@navbar-inverse-link-color:                 #fff;
+@navbar-inverse-link-color:                 @text-color;
 //@navbar-inverse-link-hover-color:           #fff;
-@navbar-inverse-link-hover-color:                 @brand-pink;
+@navbar-inverse-link-hover-color:           @brand-pink;;
 @navbar-inverse-link-hover-bg:              transparent;
 @navbar-inverse-link-active-color:          @navbar-inverse-link-hover-color;
-@navbar-inverse-link-active-bg:             @navbar-inverse-bg;
+@navbar-inverse-link-active-bg:             transparent;
 // @navbar-inverse-link-active-bg:             darken(@navbar-inverse-bg, 10%);
 @navbar-inverse-link-disabled-color:        #444;
 @navbar-inverse-link-disabled-bg:           transparent;

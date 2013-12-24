@@ -2,51 +2,27 @@
 {% load cms_tags %}
 {% block navbar_class %}home-navbar{% endblock %}
 {% block base_content %}
-    <div class="pink-border"></div>
-    <div class="home-header">
-        <div class="container">
-          <section class="row">
-            <div class="col-sm-4 logo">
-              <div class="left-bar">
-                  <a href="http://commasindustry.com"><img class="img-responsive" src="{{ STATIC_URL }}img/logos/vertical-pink.png" /></a>
-                  <div class="social-bar">
-                    <div class=row>
-                      <div class="col-xs-4" >
-                        <img class="img-responsive" src="{{ STATIC_URL }}img/icons/commas/72px/facebook.png" /></a>
-                      </div>
-                      <div class="col-xs-4" >
-                        <img class="img-responsive" src="{{ STATIC_URL }}img/icons/commas/72px/google+.png" /></a>
-                      </div>
-                      <div class="col-xs-4" >
-                        <img class="img-responsive" src="{{ STATIC_URL }}img/icons/commas/72px/twitter.png" /></a>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-            </div>
-            <div class="col-sm-8 video">
-              <div class="flex-video widescreen">
-                       {% placeholder hometeaser %}
-              <!--<iframe src="http://www.youtube.com/embed/UGtKGX8B9hU?wmode=transparent" frameborder="0" wmode="Opaque"></iframe>--></div>
-            </div>
-          </section>
+    <div class="big-header home-header">
+        {% placeholder hometeaser %}
+        <div class="home-teaser">
+            <h1>Welcome</h1>
+            <p>We are Commas & Industry. We help people build brands through communications and publicity. Please explore.</p>
+            <p><a href="#" class="btn btn-default btn-lg" role="button">More About Us</a> <a href="#" class="btn btn-default btn-lg" role="button">Contact Us</a></p>
         </div>
     </div>
-
-
     <div id="myCarousel" class="carousel slide">
-    <h1>What do our clients say?</h1>
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-      </ol>
-      <div class="carousel-inner">
-         {% placeholder reference %}
-      </div>
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+      <h1>What do our clients say?</h1>
+        <!-- Indicators -->
+<!--        <ol class="carousel-indicators">-->
+<!--          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>-->
+<!--          <li data-target="#myCarousel" data-slide-to="1"></li>-->
+<!--          <li data-target="#myCarousel" data-slide-to="2"></li>-->
+<!--          <li data-target="#myCarousel" data-slide-to="3"></li>-->
+<!--        </ol>-->
+        <div class="carousel-inner">
+           {% placeholder reference %}
+        </div>
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
     </div><!-- /.carousel -->
 {% endblock %}

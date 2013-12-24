@@ -2,8 +2,11 @@
 {% load cms_tags %}
 
 {% block base_content %}
-<div id="about">
-{% placeholder team %}
+    <div class="big-header about-header">
+        {% placeholder about-image-header %}
+    </div>
+<div id="about" class="margin-first">
+  {% placeholder team %}
 <div id="members" class="container marketing">
   <h1>Meet the team</h1>
   <div class="row">

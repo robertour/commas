@@ -66,7 +66,7 @@
   </head>
   <body class="{% block body-class %}normal{% endblock body-class %}" >
     {% cms_toolbar %}
-    <div class="navbar navbar-inverse navbar-fixed-top main-navbar {% block navbar_class %}{% endblock %}">
+    <div class="navbar navbar-inverse navbar-fixed-top main-navbar margin-first {% block navbar_class %}{% endblock %}">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -74,60 +74,42 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <!--<div class="navbar-brand-ct bg">
-            <a class="navbar-brand" href="http://commasindustry.com"><img class="img-responsive" src="{{ STATIC_URL }}img/logos/vertical-gray.png" /></a>
-          </div>
-          <div class="navbar-brand-ct fg">
-            <a class="navbar-brand" href="http://commasindustry.com"><img class="img-responsive" src="{{ STATIC_URL }}img/logos/vertical-pink.png" /></a>
-          </div>-->
           
-          <a class="navbar-brand brand-horizontal" href="http://commasindustry.com"><img class="img-responsive" src="{{ STATIC_URL }}img/logos/horizontal-no_comm-pink.png" /></a>
+          <a class="navbar-brand brand-horizontal" href="http://commasindustry.com"><img class="img-brand" src="{{ STATIC_URL }}img/logos/horizontal-gray.png" /></a>
           
         </div>
 
         <div class="navbar-collapse collapse pull-right">
           <ul class="nav navbar-nav">
               {% show_menu 0 100 100 100 "menu.html" %}
+<li class="sibbling social-icon">
+<a href="facebook.com"> <img width=24 height=24 src="{{ STATIC_URL }}img/icons/commas/72px/facebook.png" /></a>
+</li>
+<li class="sibbling social-icon">
+<a href="twitter.com"> <img width=24 height=24 src="{{ STATIC_URL }}img/icons/commas/72px/twitter.png" /></a>
+</li>
           </ul>
+          
         </div><!--/.navbar-collapse -->
       </div><!--/.container -->
     </div>
-    <div class="navbar-spacer"></div>
+    <div class="navbar-magic-bg"></div>
 
     {% block base_content %}{% endblock %}
 
     <div class="footer">
-        <div class="container" >
-          <footer>
-            <div class="row">
-                <div class="col-sm-4">
-                  <p>Commas Industry<p/>
-                  <p>Phone: +60 12-362-2810<p/>
-                  <p>Email: hello@commasindustry.com<p/>
-                </div>
-                <div class="col-sm-8">
-                  {% show_placeholder "contactform" "contact" %}
-                  <!--<form class="form-horizontal" role="form">
-                    <div class="form-group">
-                      <label for="inputEmail1" class="col-lg-2 control-label">Email</label>
-                      <div class="col-lg-10">
-                        <input type="email" class="form-control" id="inputEmail1" placeholder="Email">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="message" class="col-lg-2 control-label">Message</label>
-                      <div class="col-lg-10">
-                        <textarea class="form-control" id="message" rows="2" placeholder="Write here..."></textarea>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="col-lg-offset-2 col-lg-10">
-                        <button type="submit" class="btn btn-default">Contact Us</button>
-                      </div>
-                    </div>
-                  </form>-->
-              </div>
-           </div> <!-- row -->
+      <div class="container margin-first" >
+        <footer>
+          <div class="row">
+            <div class="col-sm-7">
+                {% show_placeholder "contactform" "contact" %}
+            </div>
+            <div class="col-sm-4 col-sm-offset-1">
+              Commas & Industry<br />
+              t: +60 12-362-2810<br />
+              e: hello@commasindustry.com<br />
+            </div>
+          </div> <!-- row -->
         </footer>
       </div> <!-- /.container -->
     </div> <!-- /.footer -->

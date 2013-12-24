@@ -3,8 +3,8 @@
 /* Padding below the footer and lighter body text */
 
 body {
-  padding-bottom: 40px;
-  color: #5a5a5a;
+padding-bottom: 40px;
+color: #5a5a5a;
 }
 
 /* CUSTOMIZE THE NAVBAR
@@ -12,8 +12,8 @@ body {
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
 .navbar-wrapper {
-  position: relative;
-  z-index: 15;
+position: relative;
+z-index: 15;
 }
 
 
@@ -22,10 +22,10 @@ body {
 
 /* Carousel base class */
 .carousel {
-  margin-bottom: 30px;
+margin-bottom: 30px;
 
-  /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
-  margin-top: -20px;
+/* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+margin-top: -20px;
 }
 
 .carousel h1{
@@ -36,43 +36,70 @@ font-size: 28px;
 
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
-  top: 30px;
-  z-index: 10;
-  color: @text-color;
-  text-shadow: none;
-  padding-top: 0;
+top: 30px;
+z-index: 10;
+color: @text-color;
+text-shadow: none;
+padding-top: 0;
+left: 30%;
+right: 30%;
 }
 
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  height: 275px;
+height: 275px;
 }
-
+.carousel p {
+position: relative;
+margin: 0;
+}
+.carousel .big-quote {
+display: inline-block;
+padding-left: 10px;
+font-size: 180px;
+position: absolute;
+color: #ccc;
+line-height: 1;
+height: 0;
+width: 0;
+}
+.carousel .big-quote.open-quote {
+left: -70px;
+top: -35px;
+}
+.carousel .big-quote.close-quote {
+right: 0;
+bottom: 50px;
+}
 .carousel .item .client{
 display: block;
-text-align: right;
+text-align: left;
 padding-top: 15px;
-font-size: 16px;
+font-size: 18px;
 color: lightgray;
+font-style: italic;
 }
 
+.carousel .item .client .dash {
+color: black;
+}
 
 .carousel-control.left, .carousel-control.right {
-    #gradient > .horizontal(@start-color: rgba(0,0,0,0); @end-color: rgba(0,0,0,0))
+#gradient > .horizontal(@start-color: rgba(0,0,0,0); @end-color: rgba(0,0,0,0))
 }
 
 .carousel-inner > .item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 275px;
+position: absolute;
+top: 0;
+left: 0;
+min-width: 100%;
+height: 275px;
 }
 
 .carousel-control {
 width: 50%;
-z-index: 40;
+z-index: 0;
 }
 
 .carousel-indicators{
@@ -80,66 +107,12 @@ z-index: 100;
 }
 
 .carousel-indicators li {
-    border: 1px solid @text-color;
+border: 1px solid @text-color;
 }
 
 .carousel-indicators .active {
-    background-color: @text-color;
+background-color: @text-color;
 }
-
-/* MARKETING CONTENT
--------------------------------------------------- */
-
-/* Pad the edges of the mobile views a bit */
-.marketing {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-/* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-.marketing h2 {
-  font-weight: normal;
-}
-.marketing .col-lg-4 p {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-
-/* Featurettes
-------------------------- */
-
-.featurette-divider {
-  margin: 80px 0; /* Space out the Bootstrap <hr> more */
-}
-.featurette {
-  padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
-  overflow: hidden; /* Vertically center images part 2: clear their floats. */
-}
-.featurette-image {
-  margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
-}
-
-/* Give some space on the sides of the floated elements so text doesn't run right into it. */
-.featurette-image.pull-left {
-  margin-right: 40px;
-}
-.featurette-image.pull-right {
-  margin-left: 40px;
-}
-
-/* Thin out the marketing headings */
-.featurette-heading {
-  font-size: 50px;
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -1px;
-}
-
 
 
 /* RESPONSIVE CSS
@@ -147,26 +120,11 @@ z-index: 100;
 
 @media (min-width: 768px) {
 
-  /* Remve the edge padding needed for mobile */
-  .marketing {
-    padding-left: 0;
-    padding-right: 0;
-  }
 
-  /* Navbar positioning foo */
-  .navbar-wrapper {
-    margin-top: 20px;
-  }
-  /* The navbar becomes detached from the top, so we round the corners */
-  .navbar-wrapper .navbar {
-    border-radius: 4px;
-  }
-
-  /* Bump up size of carousel content */
-  .carousel-caption p {
-    margin-bottom: 20px;
-    font-size: 21px;
-    line-height: 1.4;
-  }
+/* Bump up size of carousel content */
+.carousel-caption p {
+font-size: 18px;
+line-height: 1.4;
+}
 
 }
