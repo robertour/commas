@@ -295,12 +295,17 @@ CMS_PLACEHOLDER_CONF = {
     'member': {
         'plugins': {'MemberPlugin'}
     },
-    'hometeaser': {
-        'plugins': {'FilerVideoPlugin', 
-        'FilerImagePlugin', 'TextPlugin'}
+    'home-background-image': {
+        'plugins': { 'FilerImagePlugin' }
+    },
+    'home-teaser': {
+        'plugins': { 'TextPlugin' }
     },
     'contactform': {
         'plugins': ['ContactPlugin']
+    },
+    'contactform': {
+        'plugins': { 'TextPlugin' }
     },
     'content': {
         'plugins': {'FilerVideoPlugin', 'FilerFilePlugin',
