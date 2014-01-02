@@ -199,6 +199,8 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+    'avatar',
+    'disqus',
     'compressor',
     'cms',
     'mptt',
@@ -333,6 +335,15 @@ TINYMCE_DEFAULT_CONFIG = {
     'mode' : "textareas",
     'relative_urls': False
 }
+
+#ZINNIA
+ZINNIA_PAGINATION = 3
+
+#DISQUS
+DISQUS_API_KEY = 'mXY3XEWpHL07bx6CYKK8vbgU4Kh1WveazeCSIsuViflNc2eTAXWA0SzJ5Nwh4f93'
+DISQUS_WEBSITE_SHORTNAME = 'robertour'
+
+
 #TINYMCE_JS_URL = os.path.join(MEDIA_ROOT, "js/tiny_mce/tiny_mce.js")
 #TINYMCE_JS_ROOT = os.path.join(STATIC_ROOT, "js/tiny_mce")
 #TINYMCE_COMPRESSOR = True

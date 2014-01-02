@@ -1,0 +1,21 @@
+{% load i18n %}
+<nav>
+  <ul class="pagination">
+
+    {% if page.has_next %}
+    <li class="page next">
+      <a href="?page={{ page.next_page_number }}{{ GET_string }}"
+         title="{% trans "More old entries" %}">&larr; Older Posts </a>
+    </li>
+    {% endif %}
+    
+    {% if page.has_previous %}
+    <li class="page previous">
+      <a href="?page={{ page.previous_page_number }}{{ GET_string }}"
+         title="{% trans "More recent entries" %}">Newer Posts &rarr;</a>
+    </li>
+    {% endif %}
+
+
+  </ul>
+</nav>

@@ -12,4 +12,6 @@ zinnia-theme-bootstrap
 django-app-namespace-template-loader
 cmsplugin-contact
 django-widget-tweaks
+django-avatar
+django-disqus
 

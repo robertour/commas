@@ -66,6 +66,7 @@
   </head>
   <body class="{% block body-class %}normal{% endblock body-class %}" >
     {% cms_toolbar %}
+    {% block base_header %}
     <div class="navbar navbar-inverse navbar-fixed-top main-navbar margin-first {% block navbar_class %}{% endblock %}">
       <div class="container">
         <div class="navbar-header">
@@ -94,6 +95,7 @@
       </div><!--/.container -->
     </div>
     <div class="navbar-magic-bg"></div>
+    {% endblock base_header%}
 
     {% block base_content %}{% endblock %}
 

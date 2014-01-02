@@ -3,119 +3,17 @@
 
 
 {% block sidebar %}
-<aside id="widget-welcome" class="widget panel panel-default">
-  <div class="panel-heading">
-    {% trans "Welcome!" %}
-  </div>
-  <div class="panel-body">
-    <p>
-      {% trans "This simple theme is the default appearance of Zinnia." %}
-    </p>
-    <p>
-      {% trans "Don't hesitate to override the template <strong>zinnia/base.html</strong> to start <a href='http://docs.django-blog-zinnia.com/en/latest/how-to/customize_look_and_feel.html'>customizing your Weblog</a>." %}
-    </p>
-  </div>
-</aside>
-
-<aside id="widget-welcome" class="widget panel panel-default">
-  <div class="panel-heading">
-    {% trans "Menu" %}
-  </div>
-  <div class="panel-body">
-          <ul class="nav nav-pills nav-stacked ">
-            {% url 'zinnia_category_list' as category_list_url %}
-            <li {% if category_list_url in request.path %}class="active"{% endif %}>
-              <a href="{{ category_list_url }}" title="{% trans "Category list" %}">
-                {% trans "Categories" %}
-              </a>
-            </li>
-            {% url 'zinnia_author_list' as author_list_url %}
-            <li {% if author_list_url in request.path %}class="active"{% endif %}>
-              <a href="{{ author_list_url }}" title="{% trans "Author list" %}">
-                {% trans "Authors" %}
-              </a>
-            </li>
-            {% url 'zinnia_tag_list' as tag_list_url %}
-            <li {% if tag_list_url in request.path %}class="active"{% endif %}>
-              <a href="{{ tag_list_url }}" title="{% trans "Tag list" %}">
-                {% trans "Tags" %}
-              </a>
-            </li>
-            <li class="divider-horizontal"></li>
-          </ul>
-
-          <form method="get" action="{% url 'zinnia_entry_search' %}" class="navbar-form" role="search">
-            <div class="input-group">
-              <input type="text" class="search-query form-control" placeholder="{% trans 'Search' %}" name="pattern" value="{{ pattern }}" />
-              <span class="input-group-btn">
-              <button type="submit" name="submit" class="btn btn-default">
-                Search<!--<span class="glyphicon glyphicon-search"></span>-->
-              </button>
-              </span>
-            </div><!-- /input-group -->
-          </form>
-
-          <ul class="nav nav-pills">
-            {% url 'zinnia_sitemap' as sitemap_url %}
-            <li {% if sitemap in request.path %}class="active"{% endif %}>
-            <li>
-              <a href="{{ sitemap_url }}" title="{% trans "Sitemap" %}" class="sitemap">
-                {% trans "Sitemap" %}
-              </a>
-            </li>
-            <li class="divider-vertical"></li>
-            <li>
-              <a href="{% url 'zinnia_entry_latest_feed' %}" title="{% trans "RSS Feed of latest entries" %}" class="feeds">
-                {% trans "RSS Feed" %}
-              </a>
-            </li>
-          </ul>
-  </div>
-</aside>
-
-
-
-<aside id="widget-categories" class="widget panel panel-default">
-  <div class="panel-heading">
-    {% trans "Categories" %}
-  </div>
-  {% get_categories %}
-</aside>
-<aside id="widget-authors" class="widget panel panel-default">
-  <div class="panel-heading">
-    {% trans "Authors" %}
-  </div>
-  {% get_authors %}
-</aside>
 <aside id="widget-recents" class="widget panel panel-default">
   <div class="panel-heading">
-    {% trans "Recent entries" %}
+    {% trans "Recent Posts" %}
   </div>
   {% get_recent_entries %}
 </aside>
-<aside id="widget-comments" class="widget panel panel-default">
+<aside id="widget-archive" class="widget panel panel-default">
   <div class="panel-heading">
-    {% trans "Recent comments" %}
+    {% trans "Archive" %}
   </div>
-  {% get_recent_comments %}
-</aside>
-<aside id="widget-linkbacks" class="widget panel panel-default">
-  <div class="panel-heading">
-    {% trans "Recent linkbacks" %}
-  </div>
-  {% get_recent_linkbacks %}
-</aside>
-<aside id="widget-randoms" class="widget panel panel-default">
-  <div class="panel-heading">
-    {% trans "Random entries" %}
-  </div>
-  {% get_random_entries %}
-</aside>
-<aside id="widget-populars" class="widget panel panel-default">
-  <div class="panel-heading">
-    {% trans "Popular entries" %}
-  </div>
-  {% get_popular_entries %}
+  {% get_archives_entries_tree "zinnia/tags/archives_entries_tree.html" %}
 </aside>
 {% if user.is_authenticated %}
 <aside id="widget-tools" class="widget panel panel-danger">
@@ -137,6 +35,9 @@
         <span class="glyphicon glyphicon-pencil"></span>
         {% trans "Post an entry" %}
       </a>
+    </li>
+    <li class="list-group-item">
+      <a href="{% url 'avatar_change' %}">Change your avatar</a>
     </li>
     {% endif %}
     {% block admin-tools %}

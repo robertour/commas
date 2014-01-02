@@ -1,0 +1,77 @@
+{% extends "zinnia/_entry_detail_base.html" %}
+{% load comments i18n avatar_tags %}
+
+{% block entry-header %}
+{% if continue_reading %}
+  <header class="entry-header page-header">
+    {% block entry-title %}
+    <h2 class="entry-title">
+      <a href="{{ object.get_absolute_url }}" title="{{ object.title }}" rel="bookmark">
+        {{ object.title }}
+      </a>
+    </h2>
+    {% endblock entry-title %}
+    {% block entry-info %}
+      <small class="entry-info">
+      {% block entry-authors %}
+      {% with authors=object.authors.all %}
+        <div class="media">
+          {% if authors|length %}
+            <a href="{{ author.get_absolute_url }}" class="pull-left fn url{% if not author.get_full_name %} nickname{% endif %}" rel="author" title="{% blocktrans %}Show all {{ author }}'s entries{% endblocktrans %}"> {% avatar authors.0 64 %} </a>
+          {% endif %}
+            <div class="media-body ">
+              {% trans "Posted on" %}
+              <time class="published" datetime="{{ object.creation_date|date:"c" }}" pubdate="pubdate">{{ object.creation_date|date:"DATE_FORMAT" }}</time><br />
+
+              {% if authors|length %}
+                {% trans "by" %}
+                {% for author in authors %}
+                  <span class="vcard author">
+                    <a href="{{ author.get_absolute_url }}" class="fn url{% if not author.get_full_name %} nickname{% endif %}" rel="author"
+                       title="{% blocktrans %}Show all {{ author }}'s entries{% endblocktrans %}">{{ author }}</a></span>{% if not forloop.last %}, {% endif %}
+                {% endfor %}
+              {% endif %}
+            </div>
+        </div>
+      {% endwith %}
+      {% endblock entry-authors %}
+      </small>
+    {% endblock entry-info %}
+    {% block entry-last-update %}
+    <p class="entry-last-update" style="display: none;">
+      {% trans "Last update on" %} <time class="updated" datetime="{{ object.last_update|date:"c" }}">{{ object.last_update|date:"DATE_FORMAT" }}</time>.
+    </p>
+    {% endblock entry-last-update %}
+  </header>
+{% endif %}
+{% endblock entry-header %}
+
+
+{% block entry-image %}
+{% endblock entry-image %}
+
+{% block entry-footer %}
+<footer class="entry-footer">
+{% if not continue_reading or not object_content.has_more %}
+<span class='st_facebook_large' displayText='Facebook'></span>
+<span class='st_twitter_large' displayText='Tweet'></span>
+{% endif %}
+<p>
+  {% trans "Tags" %}:
+  {% for tag in object.tags_list %}
+  <a href="{% url 'zinnia_tag_detail' tag %}"
+     title="{% blocktrans %}Show all entries tagged by {{ tag }}{% endblocktrans %}"
+     rel="tag">{{ tag }}</a>{% if not forloop.last %}, {% endif %}
+  {% empty %}
+  <span>{% trans "No tags" %}</span>
+  {% endfor %}
+</p>
+</footer>
+{% endblock entry-footer %}
+
+
+{% block entry-shorturl %}
+{% endblock entry-shorturl %}
+
+{% block entry-discussions %}
+{% endblock entry-discussions %}

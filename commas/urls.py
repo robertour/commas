@@ -7,6 +7,7 @@ admin.autodiscover()
 
 urlpatterns = i18n_patterns('',
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^avatar/', include('avatar.urls')),
     url(r'^weblog/', include('zinnia.urls')),
     url(r'^comments/', include('django.contrib.comments.urls')),
 #    url(r'^tinymce/', include('tinymce.urls')),

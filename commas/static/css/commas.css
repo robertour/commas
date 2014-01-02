@@ -5202,7 +5202,7 @@ body {
   position: relative;
   z-index: 50;
   overflow: hidden;
-  height: 490px;
+  height: 75vh;
   margin-bottom: 150px;
 }
 .big-header img {
@@ -5329,25 +5329,88 @@ body {
   padding-right: 25px;
 }
 #blog {
-  margin-top: 100px;
+  margin-top: 125px;
   margin-bottom: 50px;
 }
+#blog .page-header {
+  padding-bottom: 0;
+  border: 0;
+}
+#blog .epic-entry-image {
+  height: 50vh;
+  overflow: hidden;
+}
+#blog .epic-image {
+  width: 100%;
+  height: auto;
+}
+#blog .container {
+  margin-top: 25px;
+}
+#blog article .page-header {
+  padding-bottom: 15px;
+  margin: 0;
+}
+#blog .entry-title {
+  margin-top: 0;
+}
+#blog .entry-title a {
+  margin-bottom: 30px;
+  display: block;
+}
+#blog .entry-info .media-body {
+  margin-top: 11px;
+  font-size: 14px;
+}
+#blog .continue-reading .btn-primary {
+  text-decoration: underline;
+  background-color: transparent;
+  color: black;
+  border: 0;
+  font-style: italic;
+  padding: 0;
+  font-weight: normal;
+  font-size: 16px;
+}
+#blog .entry-footer {
+  padding-bottom: 20px;
+  margin: 20px 0 50px;
+  border-bottom: 2px solid #ccc;
+  font-size: 15px;
+}
+#blog article.hentry:last-of-type .entry-footer {
+  border: 0;
+}
 #blog #sidebar .panel-default {
-  border-color: #eed3d7;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  font-size: 15px;
+  margin-bottom: 100px;
 }
 #blog #sidebar .panel-default > .panel-heading {
-  color: #C61E1C;
-  background-color: #FCDFDD;
-  border-color: #eed3d7;
+  border: 0;
+  background-color: transparent;
+  color: #ccc;
+  font-weight: bold;
+  font-size: 18px;
+  padding-top: 0;
 }
-/**
-#blog .well a, #blog .breadcrumb a {
-color: #C61E1C;
+#blog #sidebar #widget-archive.panel-default ul {
+  padding-left: 15px;
 }
-
-#blog .breadcrumb > li + li:before, #blog .breadcrumb > .active {
-color: #F6978F;
-}**/
+#blog #sidebar #widget-archive.panel-default ul ul {
+  padding-left: 30px;
+}
+#blog #sidebar #widget-archive.panel-default li {
+  padding: 2px 0;
+  list-style-type: none;
+}
+#blog .pagination > li > a,
+#blog .pagination > li > span {
+  border: 0;
+  font-size: 15px;
+}
 @media (min-width: 768px) {
   #blog .lead {
     font-size: 18px;

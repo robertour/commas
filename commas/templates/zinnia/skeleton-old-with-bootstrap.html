@@ -13,11 +13,9 @@
 {% block body-class %}zinnia{% endblock body-class %}
 
 {% block base_content %}
-
   <div id="blog">
-    {% block epic-header %}{% endblock epic-header%}
     {% block slider %}{% endblock %}
-    <div class="container margin-first">
+    <div class="container">
       <div class="row">
         <div id="content" class="hfeed col-xs-12 col-sm-8 col-md-8 col-lg-8">
           {% block breadcrumbs %}{% endblock %}
@@ -48,6 +46,9 @@
           {% endblock sidebar %}
         </div> <!-- #sidebar -->
       </div> <!-- .row -->
+      <footer class="container">
+        <p>{% blocktrans %}Powered by <a href="http://www.djangoproject.com">Django</a> and <a href="https://github.com/Fantomas42/django-blog-zinnia">Zinnia {{ ZINNIA_VERSION }}</a>.{% endblocktrans %}</p>
+      </footer>
     </div><!-- .container -->
   </div><!-- #blog -->
 {% endblock %}
