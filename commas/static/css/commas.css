@@ -5193,10 +5193,10 @@ body {
   z-index: 30;
   /* Fallback for web browsers that don't support RGBa */
 
-  background-color: #000000;
+  background-color: #e6e6e6;
   /* RGBa with 0.6 opacity */
 
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(230, 230, 230, 0.8);
 }
 .big-header {
   position: relative;
@@ -5217,10 +5217,10 @@ body {
   padding: 25px 0 10px;
   /* Fallback for web browsers that don't support RGBa */
 
-  background-color: #000000;
+  background-color: #e6e6e6;
   /* RGBa with 0.6 opacity */
 
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(230, 230, 230, 0.8);
 }
 .footer p {
   margin: 0;
