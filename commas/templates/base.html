@@ -76,22 +76,27 @@
             <span class="icon-bar"></span>
           </button>
           
-          <a class="navbar-brand brand-horizontal" href="http://commasindustry.com"><img class="img-brand" src="{{ STATIC_URL }}img/logos/horizontal-gray.png" /></a>
+          <a class="navbar-brand brand-horizontal" href="http://commasindustry.com">{% show_placeholder "main_logo" "contact" %}</a>
           
         </div>
 
-        <div class="navbar-collapse collapse pull-right">
+        <ul class="nav navbar-nav navbar-right social-icons">
+          <li>
+          <a href="http://facebook.com"> <img src="{{ STATIC_URL }}img/icons/commas/72px/facebook.png" /></a>
+          </li>
+          <li>
+          <a href="http://twitter.com"> <img src="{{ STATIC_URL }}img/icons/commas/72px/twitter.png" /></a>
+          </li>
+        </ul>
+
+        <div class="navbar-collapse collapse navbar-right">
           <ul class="nav navbar-nav">
               {% show_menu 0 100 100 100 "menu.html" %}
-<li class="sibbling social-icon">
-<a href="facebook.com"> <img width=24 height=24 src="{{ STATIC_URL }}img/icons/commas/72px/facebook.png" /></a>
-</li>
-<li class="sibbling social-icon">
-<a href="twitter.com"> <img width=24 height=24 src="{{ STATIC_URL }}img/icons/commas/72px/twitter.png" /></a>
-</li>
           </ul>
-          
         </div><!--/.navbar-collapse -->
+
+
+
       </div><!--/.container -->
     </div>
     <div class="navbar-magic-bg"></div>
@@ -99,12 +104,15 @@
 
     {% block base_content %}{% endblock %}
 
+    {% block base_footer %}
     <div class="footer">
       <div class="container margin-first" >
         <footer>
           <div class="row">
-            <div id="contact-form" name="contact-form" class="col-sm-7">
-                {% show_placeholder "contactform" "contact" %}
+            <h2 class="title-contact no-margins col-sm-12"> {% show_placeholder "contact_title" "contact" %}</h2>
+            <div id="contact-form" name="contact-form" class="col-sm-6">
+            <div class="teaser-contact">{% show_placeholder "contact_teaser" "contact" %}</div>
+              {% show_placeholder "customcontactform" "contact" %}
             </div>
             <div class="col-sm-4 col-sm-offset-1">
                 {% show_placeholder "contactinfo" "contact" %}
@@ -113,6 +121,7 @@
         </footer>
       </div> <!-- /.container -->
     </div> <!-- /.footer -->
+    {% endblock %}
 
 
 

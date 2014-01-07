@@ -197,6 +197,7 @@ INSTALLED_APPS = (
     # 'django_admin_bootstrapped',
     # 'bootstrap_admin',
     'django.contrib.admin',
+    'django.contrib.sitemaps',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'avatar',
@@ -232,6 +233,7 @@ INSTALLED_APPS = (
     'zinnia',
     'cmsplugin_zinnia',
     'cmsplugin_contact',
+    'cmsplugin_custom_contact',
     'plugins')
 
 # A sample logging configuration. The only tangible logging
@@ -297,17 +299,32 @@ CMS_PLACEHOLDER_CONF = {
     'member': {
         'plugins': {'MemberPlugin'}
     },
+    'about-image-header': {
+        'plugins': { 'FilerImagePlugin' }
+    }, 
+    'main_logo': {
+        'plugins': ['FilerImagePlugin']
+    },
     'home-background-image': {
         'plugins': { 'FilerImagePlugin' }
     },
     'home-teaser': {
         'plugins': { 'TextPlugin' }
     },
-    'contactform': {
-        'plugins': ['ContactPlugin']
+    'social-share': {
+        'plugins': ['TextPlugin']
     },
-    'contactform': {
-        'plugins': { 'TextPlugin' }
+    'contact_title': {
+        'plugins': ['TextPlugin']
+    },
+    'contact_teaser': {
+        'plugins': ['TextPlugin']
+    },
+    'customcontactform': {
+        'plugins': ['CustomContactPlugin']
+    },
+    'contactinfo': {
+        'plugins': ['TextPlugin']
     },
     'content': {
         'plugins': {'FilerVideoPlugin', 'FilerFilePlugin',
@@ -343,6 +360,11 @@ ZINNIA_PAGINATION = 3
 DISQUS_API_KEY = 'mXY3XEWpHL07bx6CYKK8vbgU4Kh1WveazeCSIsuViflNc2eTAXWA0SzJ5Nwh4f93'
 DISQUS_WEBSITE_SHORTNAME = 'robertour'
 
+# CMSPLUGIN_CONTACT
+CMSPLUGIN_CONTACT_FORMS = (
+    ('cmsplugin_contact.forms.ContactForm', 'default'),
+    ('forms.ContactFormy', 'My form'),
+)
 
 #TINYMCE_JS_URL = os.path.join(MEDIA_ROOT, "js/tiny_mce/tiny_mce.js")
 #TINYMCE_JS_ROOT = os.path.join(STATIC_ROOT, "js/tiny_mce")

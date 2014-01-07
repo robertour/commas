@@ -1,5 +1,5 @@
 {% extends "zinnia/_entry_detail_base.html" %}
-{% load comments i18n avatar_tags %}
+{% load comments i18n avatar_tags cms_tags %}
 
 {% block entry-header %}
 {% if continue_reading %}
@@ -53,8 +53,7 @@
 {% block entry-footer %}
 <footer class="entry-footer">
 {% if not continue_reading or not object_content.has_more %}
-<span class='st_facebook_large' displayText='Facebook'></span>
-<span class='st_twitter_large' displayText='Tweet'></span>
+  {% show_placeholder "social-share" "contact" %}
 {% endif %}
 <p>
   {% trans "Tags" %}:
