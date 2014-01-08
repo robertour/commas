@@ -41,3 +41,7 @@ class Member(CMSPlugin):
         verbose_name="Twitter URL")
     image = models.ImageField(upload_to='members', 
         default='img/person-placeholder.jpg')
+
+
+class PlainHTML(CMSPlugin):
+    html = models.TextField(default='', verbose_name="Plan HTML (or text)")

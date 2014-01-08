@@ -5193,6 +5193,7 @@ body {
 .brand-horizontal img {
   margin: 10px 0;
   height: 55px;
+  width: auto;
 }
 .navbar-magic-bg {
   height: 75px;
@@ -5202,10 +5203,10 @@ body {
   z-index: 30;
   /* Fallback for web browsers that don't support RGBa */
 
-  background-color: #e6e6e6;
+  background-color: #eeeeee;
   /* RGBa with 0.6 opacity */
 
-  background-color: rgba(230, 230, 230, 0.8);
+  background-color: rgba(238, 238, 238, 0.9);
 }
 .big-header {
   position: relative;
@@ -5226,10 +5227,10 @@ body {
   padding: 25px 0 10px;
   /* Fallback for web browsers that don't support RGBa */
 
-  background-color: #e6e6e6;
+  background-color: #eeeeee;
   /* RGBa with 0.6 opacity */
 
-  background-color: rgba(230, 230, 230, 0.8);
+  background-color: rgba(238, 238, 238, 0.9);
 }
 .footer p {
   margin: 0;
@@ -5240,23 +5241,29 @@ body {
 .home-header .home-teaser {
   position: relative;
   z-index: 60;
-  margin: 14% auto 0;
+  margin: 12% auto 0;
   width: 500px;
   color: #333333;
   text-align: center;
 }
 .home-header .home-teaser h1 {
   margin: 0;
+  font-size: 48px;
 }
 .home-header .home-teaser p {
-  margin: 20px 0;
+  margin: 30px 0;
+  font-size: 20px;
 }
-.home-header .home-teaser .btn-default {
+.btn-default {
   font-size: 15px;
   background-color: transparent;
   border: 2px solid black;
   width: 150px;
-  margin: 0 10px;
+}
+.home-header .home-teaser .btn-default {
+  margin: 0 15px;
+  font-size: 20px;
+  width: 175px;
 }
 .home-header .home-teaser .btn-default:hover {
   /* Fallback for web browsers that don't support RGBa */
@@ -5426,7 +5433,7 @@ body {
   }
 }
 .about-header {
-  margin-bottom: 125px;
+  margin-bottom: 90px;
 }
 #about {
   margin-bottom: 50px;
@@ -5444,15 +5451,14 @@ body {
   padding-left: 25%;
   padding-right: 25%;
 }
+#members {
+  margin-top: 25px;
+}
 #members .member {
   margin: 50px 0 75px;
   padding: 0;
-  min-height: 450px;
-  margin-bottom: 20px;
+  margin-bottom: 10%;
   text-align: center;
-}
-#members {
-  margin-top: 75px;
 }
 #members h1 {
   text-align: center;
@@ -5474,7 +5480,7 @@ body {
   margin-right: 10px;
 }
 #members .member .member-image {
-  max-width: 50%;
+  max-width: 20%;
   height: auto;
 }
 #members #twitter {
@@ -5503,6 +5509,10 @@ div.teaser-contact {
   margin: 0 0 20px;
 }
 @media (min-width: 960px) {
+  .margin-zero {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
   .margin-first {
     margin-left: 180px;
     margin-right: 180px;

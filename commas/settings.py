@@ -228,7 +228,7 @@ INSTALLED_APPS = (
     'cmsplugin_filer_video',
     'reversion',
     'tagging',
-#    'tinymce',
+    'tinymce',
     'zinnia_bootstrap',
     'zinnia',
     'cmsplugin_zinnia',
@@ -273,14 +273,13 @@ COMPRESS_PRECOMPILERS = (
 
 # DJANGO CMS
 CMS_TEMPLATES = (
-    #('template_1.html', 'Template One'),
-    #('template_2.html', 'Template Two'),
     ('zinnia/base.html', 'Zinnia Blog'),
     ('about.html', 'About'),
     ('services.html', 'Services'),
     ('credentials.html', 'Credentials'),
     ('home.html', 'Home'),
     ('contact.html', 'Contact'),
+    ('general.html', 'General')
 )
 
 CMS_PLACEHOLDER_CONF = {
@@ -309,27 +308,30 @@ CMS_PLACEHOLDER_CONF = {
         'plugins': { 'FilerImagePlugin' }
     },
     'home-teaser': {
-        'plugins': { 'TextPlugin' }
+        'plugins': { 'TextPlugin', 'PlainHTMLPlugin' }
     },
     'social-share': {
-        'plugins': ['TextPlugin']
+        'plugins': { 'TextPlugin', 'PlainHTMLPlugin' }
     },
     'contact_title': {
-        'plugins': ['TextPlugin']
+        'plugins': { 'TextPlugin', 'PlainHTMLPlugin' }
     },
     'contact_teaser': {
-        'plugins': ['TextPlugin']
+        'plugins': { 'TextPlugin', 'PlainHTMLPlugin' }
     },
     'customcontactform': {
         'plugins': ['CustomContactPlugin']
     },
     'contactinfo': {
-        'plugins': ['TextPlugin']
+        'plugins': { 'TextPlugin', 'PlainHTMLPlugin' }
     },
     'content': {
         'plugins': {'FilerVideoPlugin', 'FilerFilePlugin',
-        'FilerImagePlugin', 'TextPlugin'}
-    }
+        'FilerImagePlugin', 'TextPlugin', 'PlainHTMLPlugin' }
+    },
+    'the_css': {
+        'plugins': { 'PlainHTMLPlugin' }
+    },
 }
 
 LANGUAGES = [
@@ -350,6 +352,7 @@ ZINNIA_ENTRY_BASE_MODEL = 'cmsplugin_zinnia.placeholder.EntryPlaceholder'
 TINYMCE_DEFAULT_CONFIG = {
     'theme' : "advanced",
     'mode' : "textareas",
+    'width' : "100%",
     'relative_urls': False
 }
 
@@ -357,8 +360,9 @@ TINYMCE_DEFAULT_CONFIG = {
 ZINNIA_PAGINATION = 3
 
 #DISQUS
-DISQUS_API_KEY = 'mXY3XEWpHL07bx6CYKK8vbgU4Kh1WveazeCSIsuViflNc2eTAXWA0SzJ5Nwh4f93'
-DISQUS_WEBSITE_SHORTNAME = 'robertour'
+#DISQUS_API_KEY = 'mXY3XEWpHL07bx6CYKK8vbgU4Kh1WveazeCSIsuViflNc2eTAXWA0SzJ5Nwh4f93'
+DISQUS_API_KEY = '2YvuU4sEq9AtxiD4e6OQwku6Jc2Wy247MCg8z7WENHLgqOyemuvWgKFk5j383QUx'
+DISQUS_WEBSITE_SHORTNAME = 'commasindustry'
 
 # CMSPLUGIN_CONTACT
 CMSPLUGIN_CONTACT_FORMS = (

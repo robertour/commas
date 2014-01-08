@@ -34,6 +34,12 @@
       {% endaddtoblock %}
     {% endif %}
     {% render_block "css" %}
+    <style type="text/css">
+    {% show_placeholder "the_css" "general" %}
+    </style>
+    <style type="text/css">
+    {% placeholder "the_css" %}
+    </style>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
     <!--[if lt IE 9]>
@@ -67,7 +73,7 @@
   <body class="{% block body-class %}normal{% endblock body-class %}" >
     {% cms_toolbar %}
     {% block base_header %}
-    <div class="navbar navbar-inverse navbar-fixed-top main-navbar margin-first {% block navbar_class %}{% endblock %}">
+    <div class="navbar navbar-inverse navbar-fixed-top main-navbar margin-zero {% block navbar_class %}{% endblock %}">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -76,7 +82,7 @@
             <span class="icon-bar"></span>
           </button>
           
-          <a class="navbar-brand brand-horizontal" href="http://commasindustry.com">{% show_placeholder "main_logo" "contact" %}</a>
+          <a class="navbar-brand brand-horizontal" href="http://commasindustry.com">{% show_uncached_placeholder "main_logo" "general" %}</a>
           
         </div>
 
