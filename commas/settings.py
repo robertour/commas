@@ -311,7 +311,7 @@ CMS_PLACEHOLDER_CONF = {
         'plugins': { 'TextPlugin', 'PlainHTMLPlugin' }
     },
     'social-share': {
-        'plugins': { 'TextPlugin', 'PlainHTMLPlugin' }
+        'plugins': { 'PlainHTMLPlugin' }
     },
     'contact_title': {
         'plugins': { 'TextPlugin', 'PlainHTMLPlugin' }
