@@ -88,8 +88,9 @@
           
         </div>
 
+        <div class="pull-right social-links" >
         {%show_placeholder "social-links" "general" %}
-
+        </div>
         <div class="navbar-collapse collapse navbar-right">
           <ul class="nav navbar-nav">
               {% show_menu 0 100 100 100 "menu.html" %}
@@ -111,11 +112,11 @@
         <footer>
           <div class="row">
             <h2 class="title-contact no-margins col-sm-12"> {% show_placeholder "contact_title" "contact" %}</h2>
-            <div id="contact-form" name="contact-form" class="col-sm-6">
+            <div id="contact-form" name="contact-form" class="col-sm-6 col-sm-offset-3">
             <div class="teaser-contact">{% show_placeholder "contact_teaser" "contact" %}</div>
               {% show_placeholder "customcontactform" "contact" %}
             </div>
-            <div class="col-sm-4 col-sm-offset-1">
+            <div class="col-sm-6 col-sm-offset-3 info-contact">
                 {% show_placeholder "contactinfo" "contact" %}
             </div>
           </div> <!-- row -->

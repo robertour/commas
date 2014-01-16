@@ -1,5 +1,5 @@
 .home-header img{
-top:-35%;
+
 }
 
 .home-header .home-teaser{
@@ -13,33 +13,17 @@ text-align: center;
 
 .home-header .home-teaser h1{
 margin: 0;
-font-size: 48px;
+font-size: 3.5em;
 }
 
 .home-header .home-teaser p{
-margin: 30px 0;
-font-size: 20px;
-}
-
-.btn-default{
-font-size: 15px;
-background-color: transparent;
-border: 2px solid black;
-width: 150px;
+margin: 1.4em 0;
+font-size: 1.4em;
 }
 
 .home-header .home-teaser .btn-default {
-margin: 0 15px;
-font-size: 20px;
-width: 175px;
-}
-
-
-.home-header .home-teaser .btn-default:hover {
-/* Fallback for web browsers that don't support RGBa */
-background-color: rgb(0, 0, 0);
-/* RGBa with 0.6 opacity */
-background-color: rgba(0, 0, 0, 0.05);
+margin: 0 0.2em;
+font-weight: normal;
 }
 
 
@@ -67,4 +51,9 @@ height: 100%;
 .flex-video { padding-top: 0; }
 }
 
-
+@media screen and (max-width: 799px) {
+.home-header .home-teaser{
+width: auto;
+margin: 100px 10px 0;
+}
+}

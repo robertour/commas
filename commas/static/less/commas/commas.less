@@ -40,22 +40,20 @@ height: 50px;
 font-weight: bold;
 }
 
-.navbar .social-icons li a{
-padding-top: 13px;
-padding-right: 0;
+
+.navbar .social-links{
+margin-top: 33px;
+margin-right: 10px;
 }
 
-.navbar .social-icons li:nth-child(n+1) a{
-padding-left: 10px;
+.navbar .social-links a{
+padding: 0;
+margin: 0 0 0 10px;
 }
 
-.navbar .social-icons li a img{
+.navbar .social-links a img{
 width: 24px;
 height: 24px;
-}
-
-.brand-horizontal{
-height: 75px;
 }
 
 .brand-horizontal img{
@@ -81,7 +79,8 @@ position: relative;
 z-index: 50;
 overflow: hidden;
 height: 75vh;
-margin-bottom: 150px;
+min-height: 300px;
+margin-bottom: 5.6em;
 }
 
 .big-header img{
@@ -89,16 +88,89 @@ max-width: 100%;
 height: auto;
 width: auto\9; /* ie8 */
 position: absolute;
+min-height: 320px;
+min-height: 75vh;
 }
 
-.footer {
-padding: 25px 0 10px;
-/* Fallback for web browsers that don't support RGBa */
-background-color: rgb(238, 238, 238);
-/* RGBa with 0.6 opacity */
+.btn-default{
+font-size: 0.85em;
+background-color: transparent;
+border: 2px solid black;
+width: 35%;
+min-width: 115px; /*responsive limit*/
+}
+
+.btn-default:hover{
+background-color: black;
+color: white;
+}
+
+
+
+@media screen and (max-width: 799px) {
+body {
+font-size: 13px;
+}
+}
+
+@media screen and (max-width: @screen-small ) {
+.navbar-nav {
+margin: 0;
+height: auto;
+display: inline-block;
+text-align: left;
+padding: 0;
+border: 1px solid black;
 background-color: rgba(238, 238, 238, 0.9);
 }
+.navbar-nav > li > a{
+padding-right: 65px;
+}
+.navbar-inverse .navbar-nav > li > a:hover, 
+.navbar-inverse .navbar-nav > li > a:focus {
+background-color: rgba(200, 200, 200, 0.9);
+}
+.navbar-collapse {
+text-align: right;
+border: 0;
+margin-top: -37px;
+font-size: 12px;
+}
+.navbar-toggle{
+margin: 5px 97px 0 0;
+background-color: rgba(238, 238, 238, 0.9);
+}
+.navbar .social-links {
+margin-top: -65px;
+margin-right: 15px;
+}
+}
 
-.footer p {
-margin: 0;
+@media screen and (max-width: @screen-xsmall ) {
+body {
+font-size: 12px;
+}
+.brand-horizontal img {
+margin: 5px 0 0;
+height: 45px;
+}
+.navbar .social-links {
+margin-top: -40px;
+}
+.navbar-collapse {
+margin-top: -12px;
+}
+}
+
+
+/* Portrait */
+@media screen and (orientation:portrait) {
+/* Portrait styles */
+}
+/* Landscape */
+@media screen and (orientation:landscape) {
+/* Landscape styles */
+.big-header img{
+top: -20vh;
+}
 }
