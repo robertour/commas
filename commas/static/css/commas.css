@@ -5412,9 +5412,6 @@ body {
   width: 100%;
   height: auto;
 }
-#blog .container {
-  margin-top: 25px;
-}
 #blog article .page-header {
   padding-bottom: 15px;
   margin: 0;
@@ -5430,6 +5427,9 @@ body {
   margin-top: 11px;
   font-size: 14px;
 }
+#blog .container {
+  margin-top: 2em;
+}
 #blog .continue-reading .btn-primary {
   text-decoration: underline;
   background-color: transparent;
@@ -5442,9 +5442,16 @@ body {
 }
 #blog .entry-footer {
   padding-bottom: 20px;
-  margin: 20px 0 50px;
+  margin: 2em 0 1.5em;
   border-bottom: 2px solid #ccc;
   font-size: 15px;
+}
+#blog .social-share {
+  margin: 2em 0 2em 0;
+}
+#blog .social-share img {
+  height: 48px;
+  margin-right: 0.6em;
 }
 #blog article.hentry:last-of-type .entry-footer {
   border: 0;
@@ -5485,57 +5492,65 @@ body {
   }
 }
 @media (min-width: 600px) {
-  #blog #sidebar {
+  .entry-list #blog #sidebar {
     margin-top: 60px;
+    padding-left: 35px;
+  }
+  .entry #blog #sidebar {
     padding-left: 35px;
   }
   #blog #sidebar .panel-default {
     margin-bottom: 100px;
   }
 }
+@media (max-width: 600px) {
+  #blog header.entry-header.margin-first {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
 .about-header {
-  margin-bottom: 100px;
+  margin-bottom: 6.5em;
 }
 #about {
   margin-bottom: 50px;
 }
 #about .jumbotron h1 {
-  font-size: 28px;
+  font-size: 2em;
   margin-bottom: 1em;
   text-align: center;
   margin-top: 0;
 }
 #about .jumbotron {
   padding-top: 0;
-  font-size: 18px;
+  font-size: 1.3em;
   background-color: transparent;
-  padding-left: 25%;
-  padding-right: 25%;
+  margin-bottom: 2em;
+  padding-bottom: 1em;
 }
 #members {
-  margin-top: 25px;
+  margin-top: 2em;
 }
 #members .member {
-  margin: 50px 0 75px;
+  margin: 3em 0 6em;
   padding: 0;
-  margin-bottom: 10%;
   text-align: center;
 }
 #members h1 {
   text-align: center;
-  font-size: 28px;
+  font-size: 2.2em;
 }
 #members h2 {
   text-align: center;
   margin-bottom: 0;
-  font-size: 22px;
+  font-size: 1.8em;
 }
 #members h3 {
   text-align: center;
   font-weight: normal;
   font-style: italic;
   margin-top: 0;
-  font-size: 18px;
+  font-size: 1.4em;
 }
 #members .member p {
   margin-right: 10px;
@@ -5549,6 +5564,10 @@ body {
   margin-top: 14px;
 }
 @media (min-width: 600px) {
+  #about-jumbotron {
+    padding-left: 25%;
+    padding-right: 25%;
+  }
   #members {
     padding-left: 22%;
     padding-right: 22%;
@@ -5592,13 +5611,31 @@ div.teaser-contact {
 .info-contact {
   padding-bottom: 10px;
 }
-@media (min-width: 960px) {
+@media (min-width: 600px) {
   .margin-zero {
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 15px;
+    margin-right: 15px;
   }
   .margin-first {
-    margin-left: 180px;
-    margin-right: 180px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+@media (min-width: 960px) {
+  .margin-zero {
+    margin-left: 2%;
+    /*@grid-gutter-width*2;*/
+  
+    margin-right: 2%;
+    /*@grid-gutter-width*2;*/
+  
+  }
+  .margin-first {
+    margin-left: 18%;
+    /*@grid-gutter-width*6;*/
+  
+    margin-right: 18%;
+    /*@grid-gutter-width*6;*/
+  
   }
 }

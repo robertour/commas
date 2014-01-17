@@ -1,10 +1,24 @@
-@media (min-width: 960px) {
+@media (min-width: @screen-small) {
   .margin-zero {
-  margin-left: @grid-gutter-width*2;
-  margin-right: @grid-gutter-width*2;
+  margin-left: 15px;
+  margin-right: 15px;
   }
   .margin-first {
-  margin-left: @grid-gutter-width*6;
-  margin-right: @grid-gutter-width*6;
+  margin-left: 15px;
+  margin-right: 15px;
   }
 }
+
+
+@media (min-width: 960px) {
+  .margin-zero {
+  margin-left: 2%; /*@grid-gutter-width*2;*/
+  margin-right: 2%; /*@grid-gutter-width*2;*/
+  }
+  .margin-first {
+  margin-left: 18%; /*@grid-gutter-width*6;*/
+  margin-right: 18%; /*@grid-gutter-width*6;*/
+  }
+}
+
+
