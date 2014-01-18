@@ -15,7 +15,7 @@ urlpatterns = i18n_patterns('',
     url(r'^avatar/', include('avatar.urls')),
     url(r'^weblog/', include('zinnia.urls')),
     url(r'^comments/', include('django.contrib.comments.urls')),
-#    url(r'^tinymce/', include('tinymce.urls')),
+    url(r'^tinymce/', include('tinymce.urls')),
     url(r'^sitemap.xml$', 'django.contrib.sitemaps.views.sitemap', {
         'sitemaps': {
             'cmspages': CMSSitemap,
