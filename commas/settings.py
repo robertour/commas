@@ -308,31 +308,25 @@ CMS_PLACEHOLDER_CONF = {
         'plugins': { 'FilerImagePlugin' }
     },
     'home-teaser': {
-        'plugins': { 'TextPlugin', 'EditorTextPlugin',
-        'PlainHTMLPlugin' }
+        'plugins': { 'TextPlugin', 'EditorTextPlugin' }
     },
     'social-share': {
-        'plugins': { 'TextPlugin', 
-        'PlainHTMLPlugin' }
+        'plugins': { 'TextPlugin' }
     },
     'social-links': {
-        'plugins': { 'TextPlugin', 
-        'PlainHTMLPlugin' }
+        'plugins': { 'TextPlugin' }
     },
     'contact_title': {
-        'plugins': { 'TextPlugin', 'EditorTextPlugin', 
-        'PlainHTMLPlugin' }
+        'plugins': { 'TextPlugin', 'EditorTextPlugin' }
     },
     'contact_teaser': {
-        'plugins': { 'TextPlugin', 'EditorTextPlugin', 
-        'PlainHTMLPlugin' }
+        'plugins': { 'TextPlugin', 'EditorTextPlugin'' }
     },
     'customcontactform': {
         'plugins': {'CustomContactPlugin'}
     },
     'contactinfo': {
-        'plugins': { 'TextPlugin', 'EditorTextPlugin',
-        'PlainHTMLPlugin' }
+        'plugins': { 'TextPlugin', 'EditorTextPlugin' }
     },
     'custom-widgets-top': {
         'plugins': {'FilerVideoPlugin', 'FilerImagePlugin', 
@@ -348,12 +342,10 @@ CMS_PLACEHOLDER_CONF = {
     },
     'content': {
         'plugins': {'FilerVideoPlugin', 'FilerFilePlugin',
-        'FilerImagePlugin', 'TextPlugin', 'EditorTextPlugin', 
-        'PlainHTMLPlugin' }
+        'FilerImagePlugin', 'TextPlugin', 'EditorTextPlugin' }
     },
     'the_css': {
-        'plugins': { 'TextPlugin', 
-        'PlainHTMLPlugin' }
+        'plugins': { 'TextPlugin' }
     },
 }
 

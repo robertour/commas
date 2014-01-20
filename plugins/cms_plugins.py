@@ -4,7 +4,7 @@ from django.utils.translation import ugettext_lazy as _
 from cms.plugins.text.models import Text
 from cms.plugins.text.cms_plugins import TextPlugin as TextPluginCMS
 
-from models import Credential, Reference, Service, Team, Member, PlainHTML, Widget
+from models import Credential, Reference, Service, Team, Member, Widget
 
 
 class CredentialPlugin(CMSPluginBase):
@@ -70,18 +70,6 @@ class MemberPlugin(CMSPluginBase):
         return context
 
 plugin_pool.register_plugin(MemberPlugin)
-
-
-class PlainHTMLPlugin(CMSPluginBase):
-    model = PlainHTML
-    name = _("Plain HTML/Text (No Editor) ")
-    render_template = "plain.html"
-
-    def render(self, context, instance, placeholder):
-        context['instance'] = instance
-        return context
-
-plugin_pool.register_plugin(PlainHTMLPlugin)
 
 
 class TextPlugin(CMSPluginBase):

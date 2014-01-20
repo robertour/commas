@@ -45,6 +45,22 @@
 {% endblock entry-header %}
 
 
+{% block entry-image %}
+{% if not continue_reading %}
+{% if object.image %}
+<div class="entry-image">
+  <p>
+    <a href="{{ object.get_absolute_url }}" title="{{ object.title }}" rel="bookmark">
+      <img src="{{ object.image.url }}" alt="{{ object.title }}" class="img-thumbnail img-responsive" />
+    </a>
+  </p>
+</div>
+{% endif %}
+{% endif %}
+{% endblock entry-image %}
+
+
+
 {% block entry-footer %}
 <footer class="entry-footer">
 {% if not continue_reading or not object_content.has_more %}

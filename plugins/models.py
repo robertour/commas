@@ -43,10 +43,6 @@ class Member(CMSPlugin):
         default='img/person-placeholder.jpg')
 
 
-class PlainHTML(CMSPlugin):
-    html = models.TextField(default='', verbose_name="Plain HTML (or text)")
-
-
 class Widget(CMSPlugin):
     heading = models.CharField(max_length=100, verbose_name='Title',
         null=True, blank=True)
