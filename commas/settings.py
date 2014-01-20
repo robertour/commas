@@ -320,7 +320,7 @@ CMS_PLACEHOLDER_CONF = {
         'plugins': { 'TextPlugin', 'EditorTextPlugin' }
     },
     'contact_teaser': {
-        'plugins': { 'TextPlugin', 'EditorTextPlugin'' }
+        'plugins': { 'TextPlugin', 'EditorTextPlugin' }
     },
     'customcontactform': {
         'plugins': {'CustomContactPlugin'}
