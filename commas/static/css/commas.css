@@ -5570,6 +5570,7 @@ body {
 }
 #members .member p {
   margin-right: 10px;
+  font-size: 1.3em;
 }
 #members .member .member-image {
   max-width: 20%;
