@@ -2,60 +2,64 @@
 {% load comments i18n avatar_tags cms_tags %}
 
 {% block entry-header %}
-{% if continue_reading %}
-  <header class="entry-header page-header">
-    {% block entry-title %}
-    <h2 class="entry-title">
-      <a href="{{ object.get_absolute_url }}" title="{{ object.title }}" rel="bookmark">
-        {{ object.title }}
-      </a>
-    </h2>
-    {% endblock entry-title %}
-    {% block entry-info %}
-      <small class="entry-info">
-      {% block entry-authors %}
-      {% with authors=object.authors.all %}
-        <div class="media">
-          {% if authors|length %}
-            <a href="{{ author.get_absolute_url }}" class="pull-left fn url{% if not author.get_full_name %} nickname{% endif %}" rel="author" title="{% blocktrans %}Show all {{ author }}'s entries{% endblocktrans %}"> {% avatar authors.0 64 %} </a>
-          {% endif %}
-            <div class="media-body ">
-              {% trans "Posted on" %}
-              <time class="published" datetime="{{ object.creation_date|date:"c" }}" pubdate="pubdate">{{ object.creation_date|date:"DATE_FORMAT" }}</time><br />
+<header class="entry-header page-header">
+  {% block entry-title %}
+  <h2 class="entry-title">
+    <a href="{{ object.get_absolute_url }}" title="{{ object.title }}" rel="bookmark">
+      {{ object.title }}
+    </a>
+  </h2>
+  {% endblock entry-title %}
+  {% block entry-info %}
+    <small class="entry-info">
+    {% block entry-authors %}
+    {% with authors=object.authors.all %}
+      <div class="media">
+        {% if authors|length %}
+          <a href="{{ author.get_absolute_url }}" class="pull-left fn url{% if not author.get_full_name %} nickname{% endif %}" rel="author" title="{% blocktrans %}Show all {{ author }}'s entries{% endblocktrans %}"> {% avatar authors.0 64 %} </a>
+        {% endif %}
+          <div class="media-body ">
+            {% trans "Posted on" %}
+            <time class="published" datetime="{{ object.creation_date|date:"c" }}" pubdate="pubdate">{{ object.creation_date|date:"DATE_FORMAT" }}</time><br />
 
-              {% if authors|length %}
-                {% trans "by" %}
-                {% for author in authors %}
-                  <span class="vcard author">
-                    <a href="{{ author.get_absolute_url }}" class="fn url{% if not author.get_full_name %} nickname{% endif %}" rel="author"
-                       title="{% blocktrans %}Show all {{ author }}'s entries{% endblocktrans %}">{{ author }}</a></span>{% if not forloop.last %}, {% endif %}
-                {% endfor %}
-              {% endif %}
-            </div>
-        </div>
-      {% endwith %}
-      {% endblock entry-authors %}
-      </small>
-    {% endblock entry-info %}
-    {% block entry-last-update %}
-    <p class="entry-last-update" style="display: none;">
-      {% trans "Last update on" %} <time class="updated" datetime="{{ object.last_update|date:"c" }}">{{ object.last_update|date:"DATE_FORMAT" }}</time>.
-    </p>
-    {% endblock entry-last-update %}
-  </header>
-{% endif %}
+            {% if authors|length %}
+              {% trans "by" %}
+              {% for author in authors %}
+                <span class="vcard author">
+                  <a href="{{ author.get_absolute_url }}" class="fn url{% if not author.get_full_name %} nickname{% endif %}" rel="author"
+                     title="{% blocktrans %}Show all {{ author }}'s entries{% endblocktrans %}">{{ author }}</a></span>{% if not forloop.last %}, {% endif %}
+              {% endfor %}
+            {% endif %}
+          </div>
+      </div>
+    {% endwith %}
+    {% endblock entry-authors %}
+    </small>
+  {% endblock entry-info %}
+  {% block entry-last-update %}
+  <p class="entry-last-update" style="display: none;">
+    {% trans "Last update on" %} <time class="updated" datetime="{{ object.last_update|date:"c" }}">{{ object.last_update|date:"DATE_FORMAT" }}</time>.
+  </p>
+  {% endblock entry-last-update %}
+</header>
 {% endblock entry-header %}
 
-
-{% block entry-image %}
-{% endblock entry-image %}
 
 {% block entry-footer %}
 <footer class="entry-footer">
 {% if not continue_reading or not object_content.has_more %}
   
-  <div class="social-share"><a href="http://www.facebook.com/sharer.php?u={{ request.build_absolute_uri }}"><img src="/static/img/icons/commas/64px/facebook.png" /></a>
-  <a href="http://twitter.com/share?url=<script type={{ request.build_absolute_uri }}"><img src="/static/img/icons/commas/64px/twitter.png" /></a></div>
+  <div class="social-share">
+  <a href="http://www.facebook.com/sharer.php?u={{ request.build_absolute_uri }}"><img src="/static/img/icons/commas/64px/facebook.png" /></a>
+  <a href="http://twitter.com/share?url=<script type={{ request.build_absolute_uri }}"><img src="/static/img/icons/commas/64px/twitter.png" /></a>
+  <!--http://www.linkedin.com/shareArticle?mini=true&url={articleUrl}&title={articleTitle}&summary={articleSummary}&source={articleSource}-->
+  <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ request.build_absolute_uri }}"><img src="/static/img/icons/commas/64px/linkedin.png" /></a>
+  <a href="https://plus.google.com/share?url={{ request.build_absolute_uri }}"><img src="/static/img/icons/commas/64px/google.png" /></a>
+  <a href='javascript:void((function()%7Bvar%20e=document.createElement(&apos;script&apos;);e.setAttribute(&apos;type&apos;,&apos;text/javascript&apos;);e.setAttribute(&apos;charset&apos;,&apos;UTF-8&apos;);e.setAttribute(&apos;src&apos;,&apos;http://assets.pinterest.com/js/pinmarklet.js?r=&apos;+Math.random()*99999999);document.body.appendChild(e)%7D)());'><img src='/static/img/icons/commas/64px/pinterest.png'/></a>
+  
+
+  </div>
+  
   {% comment %}
   {% show_placeholder "social-share" "general" %}
   {% endcomment %}

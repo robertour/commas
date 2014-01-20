@@ -9,9 +9,9 @@
             <label class="col-lg-12 no-margins" for="{{ field.auto_id }}">{{ field.label }}</label>
             <div class="col-lg-12">
               {% if field.auto_id == 'id_subject' %}
-                {{ field|add_class:"form-control"|attr:"rows:4"|attr:"value:New Query in CommasIndustry.com" }}
+                {{ field|add_class:"form-control"|attr:"rows:1"|attr:"value:New Query in CommasIndustry.com" }}
               {% else %}
-                {{ field|add_class:"form-control"|attr:"rows:4" }}
+                {{ field|add_class:"form-control"|attr:"rows:6" }}
               {% endif %}
             </div>
             {% if field.errors %}

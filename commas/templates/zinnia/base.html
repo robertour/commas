@@ -1,19 +1,27 @@
 {% extends "zinnia:zinnia/base.html" %}
 {% load zinnia_tags i18n %}
+{% load cms_tags sekizai_tags %}
 
 
 {% block sidebar %}
+{% placeholder custom-widgets-top %}
 <aside id="widget-recents" class="widget panel panel-default">
   <div class="panel-heading">
     {% trans "Recent Posts" %}
   </div>
   {% get_recent_entries %}
 </aside>
+<aside id="custom-widgets-middle" class="widget panel panel-default">
+{% placeholder custom-widgets-middle %}
+</aside>
 <aside id="widget-archive" class="widget panel panel-default">
   <div class="panel-heading">
     {% trans "Archive" %}
   </div>
   {% get_archives_entries_tree "zinnia/tags/archives_entries_tree.html" %}
+</aside>
+<aside id="custom-widgets-bottom" class="widget panel panel-default">
+{% placeholder custom-widgets-bottom %}
 </aside>
 {% if user.is_authenticated %}
 <aside id="widget-tools" class="widget panel panel-danger">

@@ -107,12 +107,12 @@
     {% block base_content %}{% endblock %}
 
     {% block base_footer %}
-    <div class="footer">
+    <div id="contact-form" class="footer">
       <div class="container margin-first" >
         <footer>
           <div class="row">
             <h2 class="title-contact no-margins col-sm-12"> {% show_placeholder "contact_title" "contact" %}</h2>
-            <div id="contact-form" name="contact-form" class="col-sm-6 col-sm-offset-3">
+            <div name="contact-form" class="col-sm-6 col-sm-offset-3">
             <div class="teaser-contact">{% show_placeholder "contact_teaser" "contact" %}</div>
               {% show_placeholder "customcontactform" "contact" %}
             </div>

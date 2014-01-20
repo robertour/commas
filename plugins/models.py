@@ -44,4 +44,10 @@ class Member(CMSPlugin):
 
 
 class PlainHTML(CMSPlugin):
-    html = models.TextField(default='', verbose_name="Plan HTML (or text)")
+    html = models.TextField(default='', verbose_name="Plain HTML (or text)")
+
+
+class Widget(CMSPlugin):
+    heading = models.CharField(max_length=100, verbose_name='Title',
+        null=True, blank=True)
+    body = models.TextField(verbose_name='Body')

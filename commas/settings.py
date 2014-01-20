@@ -210,21 +210,21 @@ INSTALLED_APPS = (
     'sekizai',
     'widget_tweaks',
     #'cms.plugins.file',
-    'cms.plugins.flash',
-    'cms.plugins.googlemap',
-    'cms.plugins.link',
+    #'cms.plugins.flash',
+    #'cms.plugins.googlemap',
+    #'cms.plugins.link',
     #'cms.plugins.picture',
-    'cms.plugins.snippet',
+    #'cms.plugins.snippet',
     #'cms.plugins.teaser',
     'cms.plugins.text',
     #'cms.plugins.video',
-    'cms.plugins.twitter',
+    #'cms.plugins.twitter',
     'easy_thumbnails',
     'filer',
     'cmsplugin_filer_file',
     'cmsplugin_filer_folder',
     'cmsplugin_filer_image',
-    'cmsplugin_filer_teaser',
+    #'cmsplugin_filer_teaser',
     'cmsplugin_filer_video',
     'reversion',
     'tagging',
@@ -302,35 +302,58 @@ CMS_PLACEHOLDER_CONF = {
         'plugins': { 'FilerImagePlugin' }
     }, 
     'main_logo': {
-        'plugins': ['FilerImagePlugin']
+        'plugins': {'FilerImagePlugin'}
     },
     'home-background-image': {
         'plugins': { 'FilerImagePlugin' }
     },
     'home-teaser': {
-        'plugins': { 'TextPlugin', 'PlainHTMLPlugin' }
+        'plugins': { 'TextPlugin', 'EditorTextPlugin',
+        'PlainHTMLPlugin' }
     },
     'social-share': {
-        'plugins': { 'PlainHTMLPlugin' }
+        'plugins': { 'TextPlugin', 
+        'PlainHTMLPlugin' }
+    },
+    'social-links': {
+        'plugins': { 'TextPlugin', 
+        'PlainHTMLPlugin' }
     },
     'contact_title': {
-        'plugins': { 'TextPlugin', 'PlainHTMLPlugin' }
+        'plugins': { 'TextPlugin', 'EditorTextPlugin', 
+        'PlainHTMLPlugin' }
     },
     'contact_teaser': {
-        'plugins': { 'TextPlugin', 'PlainHTMLPlugin' }
+        'plugins': { 'TextPlugin', 'EditorTextPlugin', 
+        'PlainHTMLPlugin' }
     },
     'customcontactform': {
-        'plugins': ['CustomContactPlugin']
+        'plugins': {'CustomContactPlugin'}
     },
     'contactinfo': {
-        'plugins': { 'TextPlugin', 'PlainHTMLPlugin' }
+        'plugins': { 'TextPlugin', 'EditorTextPlugin',
+        'PlainHTMLPlugin' }
+    },
+    'custom-widgets-top': {
+        'plugins': {'FilerVideoPlugin', 'FilerImagePlugin', 
+        'TextPlugin', 'EditorTextPlugin', 'WidgetPlugin' }
+    },
+    'custom-widgets-middle': {
+        'plugins': {'FilerVideoPlugin', 'FilerImagePlugin', 
+        'TextPlugin', 'EditorTextPlugin', 'WidgetPlugin' }
+    },
+    'custom-widgets-bottom': {
+        'plugins': {'FilerVideoPlugin', 'FilerImagePlugin', 
+        'TextPlugin', 'EditorTextPlugin', 'WidgetPlugin' }
     },
     'content': {
         'plugins': {'FilerVideoPlugin', 'FilerFilePlugin',
-        'FilerImagePlugin', 'TextPlugin', 'PlainHTMLPlugin' }
+        'FilerImagePlugin', 'TextPlugin', 'EditorTextPlugin', 
+        'PlainHTMLPlugin' }
     },
     'the_css': {
-        'plugins': { 'PlainHTMLPlugin' }
+        'plugins': { 'TextPlugin', 
+        'PlainHTMLPlugin' }
     },
 }
 

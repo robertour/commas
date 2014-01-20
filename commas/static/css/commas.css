@@ -5248,7 +5248,6 @@ body {
     display: inline-block;
     text-align: left;
     padding: 0;
-    border: 1px solid black;
     background-color: rgba(238, 238, 238, 0.9);
   }
   .navbar-nav > li > a {
@@ -5262,15 +5261,22 @@ body {
     text-align: right;
     border: 0;
     margin-top: -37px;
-    font-size: 12px;
+    font-size: 13px;
   }
-  .navbar-toggle {
-    margin: 5px 97px 0 0;
-    background-color: rgba(238, 238, 238, 0.9);
+  .navbar-inverse .navbar-toggle {
+    margin: 5px 15px 0 0;
+    background-color: rgba(246, 151, 143, 0.5);
+    border: 0;
+  }
+  .navbar-inverse .navbar-toggle:hover,
+  .navbar-inverse .navbar-toggle:focus {
+    background-color: rgba(246, 151, 143, 0.9);
+    border: 0;
   }
   .navbar .social-links {
-    margin-top: -65px;
-    margin-right: 15px;
+    position: absolute;
+    top: -25px;
+    right: 65px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -5280,9 +5286,6 @@ body {
   .brand-horizontal img {
     margin: 5px 0 0;
     height: 45px;
-  }
-  .navbar .social-links {
-    margin-top: -40px;
   }
   .navbar-collapse {
     margin-top: -12px;
@@ -5350,6 +5353,19 @@ body {
   .home-header .home-teaser {
     width: auto;
     margin: 100px 10px 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .home-header .home-teaser .btn-default {
+    width: 47%;
+  }
+}
+@media screen and (max-width: 310px) {
+  .home-header .home-teaser .btn-default {
+    margin: 20px auto;
+    display: block;
+    width: 60%;
+    padding: 10px 0;
   }
 }
 #featurettes {
@@ -5430,6 +5446,10 @@ body {
 #blog .container {
   margin-top: 2em;
 }
+#blog .img-thumbnail {
+  border: 0;
+  padding: 0;
+}
 #blog .continue-reading .btn-primary {
   text-decoration: underline;
   background-color: transparent;
@@ -5450,7 +5470,7 @@ body {
   margin: 2em 0 2em 0;
 }
 #blog .social-share img {
-  height: 48px;
+  height: 32px;
   margin-right: 0.6em;
 }
 #blog article.hentry:last-of-type .entry-footer {
@@ -5492,10 +5512,6 @@ body {
   }
 }
 @media (min-width: 600px) {
-  .entry-list #blog #sidebar {
-    margin-top: 60px;
-    padding-left: 35px;
-  }
   .entry #blog #sidebar {
     padding-left: 35px;
   }
@@ -5574,14 +5590,8 @@ body {
   }
 }
 input[type=text].form-control {
-  width: 60%;
   height: 24px;
   margin: 0 auto;
-}
-footer .btn-lg {
-  margin: 5px 0 8px;
-  font-size: 1.2em;
-  font-weight: normal;
 }
 .footer {
   padding: 25px 0 10px;
@@ -5600,16 +5610,25 @@ footer .btn-lg {
   margin: 0;
 }
 .title-contact {
-  margin: 0 0 10px;
-  font-size: 3em;
+  margin: 0;
+  font-size: 2.5em;
 }
 div.teaser-contact {
   font-size: 1.1em;
   font-weight: bold;
-  margin: 0 0 10px;
+  margin: 0.5em 0;
+}
+.footer form {
+  text-align: left;
+}
+footer .btn-lg {
+  margin: 5px auto 8px;
+  display: block;
+  font-size: 1.2em;
+  font-weight: normal;
 }
 .info-contact {
-  padding-bottom: 10px;
+  padding-bottom: 0.2em;
 }
 @media (min-width: 600px) {
   .margin-zero {

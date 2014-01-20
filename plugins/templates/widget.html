@@ -1,0 +1,8 @@
+<aside id="custom-widgets-top" class="widget panel panel-default">
+	{% if instance.heading %}
+		<div class="panel-heading">
+			{{ instance.heading|safe }}
+		</div>
+	{% endif %}
+	{{ instance.body|safe }}
+</aside>
