@@ -301,6 +301,9 @@ CMS_PLACEHOLDER_CONF = {
     'about-image-header': {
         'plugins': { 'FilerImagePlugin' }
     }, 
+    'service-image-header': {
+        'plugins': { 'FilerImagePlugin' }
+    }, 
     'main_logo': {
         'plugins': {'FilerImagePlugin'}
     },
