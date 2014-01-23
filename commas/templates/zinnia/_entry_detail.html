@@ -16,7 +16,7 @@
     {% with authors=object.authors.all %}
       <div class="media">
         {% if authors|length %}
-          <a href="{{ author.get_absolute_url }}" class="pull-left fn url{% if not author.get_full_name %} nickname{% endif %}" rel="author" title="{% blocktrans %}Show all {{ author }}'s entries{% endblocktrans %}"> {% avatar authors.0 64 %} </a>
+          <a href="{{ author.get_absolute_url }}" class="pull-left fn url{% if not author.get_full_name %} nickname{% endif %}" rel="author" title="{% blocktrans %}Show all {{ author }}'s entries{% endblocktrans %}"> {% avatar authors.0 50 %} </a>
         {% endif %}
           <div class="media-body ">
             {% trans "Posted on" %}

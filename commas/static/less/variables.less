@@ -39,8 +39,23 @@
 
 // Typography
 // -------------------------
+@font-face {
+  font-family: 'Commas Light';
+  src: url('../font/commas-light.eot?') format('eot'), url('../font/commas-light.woff') format('woff'), url('../font/commas-light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Commas Semibold';
+  src: url('../font/commas-semibold.eot?') format('eot'), url('../font/commas-semibold.woff') format('woff'), url('../font/commas-semibold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Commas Bold';
+  src: url('../font/commas-heavy.eot?') format('eot'), url('../font/commas-heavy.woff') format('woff'), url('../font/commas-heavy.ttf') format('truetype');
+}
 
-@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+
+@font-family-sans-serif:  "Commas Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-sans-serif-headings:  "Commas Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 @font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
@@ -52,7 +67,7 @@
 @line-height-base:        1.428571429; // 20/14
 @line-height-computed:    floor(@font-size-base * @line-height-base); // ~20px
 
-@headings-font-family:    @font-family-base;
+@headings-font-family:    @font-family-sans-serif-headings;
 @headings-font-weight:    500;
 @headings-line-height:    1.1;
 
