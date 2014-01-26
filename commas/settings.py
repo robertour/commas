@@ -289,6 +289,9 @@ CMS_PLACEHOLDER_CONF = {
     'reference': {
         'plugins': {'ReferencePlugin'}
     },
+    'reference-title': {
+        'plugins': {'TextPlugin'}
+    },
     'service': {
         'plugins': {'ServicePlugin'}
     },

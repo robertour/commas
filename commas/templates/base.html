@@ -6,138 +6,145 @@
 {% load url from future %}
 <!DOCTYPE html>
 <html lang="{{ LANGUAGE_CODE }}">
-  <head>
-    <meta charset="utf-8">
-    <title>Commas & Industry</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{% block meta-description %}{% trans "Public Relations in Malaysia" %}{% endblock meta-description %}{% block meta-description-page %}{% endblock meta-description-page %}" />
-    <meta name="author" content="{% block meta-author %}Ying Nee Ooi{% endblock %}">
-    <meta name="keywords" content="{% block meta-keywords %}public relations, pr, Kuala Lumpur, Malaysia{% endblock %}" />
-    <meta name="robots" content="follow, all" />
-    <meta name="language" content="{{ LANGUAGE_CODE }}" />
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta http-equiv="cache-control" content="public" />
-    {% block meta %}{% endblock %}
+	<head>
+		<meta charset="utf-8">
+		<title>Commas & Industry</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="{% block meta-description %}{% trans "Public Relations in Malaysia" %}{% endblock meta-description %}{% block meta-description-page %}{% endblock meta-description-page %}" />
+		<meta name="author" content="{% block meta-author %}Ying Nee Ooi{% endblock %}">
+		<meta name="keywords" content="{% block meta-keywords %}public relations, pr, Kuala Lumpur, Malaysia{% endblock %}" />
+		<meta name="robots" content="follow, all" />
+		<meta name="language" content="{{ LANGUAGE_CODE }}" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta http-equiv="cache-control" content="public" />
+		{% block meta %}{% endblock %}
 
-    <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon/pink.ico" />
-    <link rel="icon" href="{{ STATIC_URL }}img/favicon/pink.ico" type="image/x-icon">
-    <!-- Bootstrap Less-->
-    {% if debug %}
-      <link rel="stylesheet/less" type="text/css" media="all" href="{{STATIC_URL}}less/custom.less" />
-      <script src="{{STATIC_URL}}js/less-1.4.1.min.js"></script>
-      {% comment %} {% compress css %}
-      <link rel="stylesheet" type="text/less" media="all" href="{{ STATIC_URL }}less/custom.less" />
-      {% endcompress %} {% endcomment %}
-    {% else %}
-      {% addtoblock "css" %}
-      <link href="{{STATIC_URL}}css/commas.css" media="screen" rel="stylesheet" type="text/css" />
-      {% endaddtoblock %}
-    {% endif %}
-    {% render_block "css" %}
-    <link href="https://dl.dropboxusercontent.com/u/462142/css/commas.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="https://dl.dropboxusercontent.com/u/25350334/commas-design/style.css" media="screen" rel="stylesheet" type="text/css" />
-    <style type="text/css">
-    {% show_placeholder "the_css" "general" %}
-    </style>
-    <style type="text/css">
-    {% placeholder "the_css" %}
-    </style>
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-    <!--[if lt IE 9]>
-        <script src="{{STATIC_URL}}js/html5shiv.js"></script>
-        <script src="{{STATIC_URL}}js/respond.min.js"></script>
-    <![endif]-->
-    <!-- Custom styles for this template -->
-    <!-- <link href="{{ STATIC_URL }}css/carousel.css" rel="stylesheet"> -->
-
-
+		<link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon/pink.ico" />
+		<link rel="icon" href="{{ STATIC_URL }}img/favicon/pink.ico" type="image/x-icon">
+		<!-- Bootstrap Less-->
+		{% if debug %}
+			<link rel="stylesheet/less" type="text/css" media="all" href="{{STATIC_URL}}less/custom.less" />
+			<script src="{{STATIC_URL}}js/less-1.4.1.min.js"></script>
+			{% comment %} {% compress css %}
+			<link rel="stylesheet" type="text/less" media="all" href="{{ STATIC_URL }}less/custom.less" />
+			{% endcompress %} {% endcomment %}
+		{% else %}
+			{% addtoblock "css" %}
+			<link href="{{STATIC_URL}}css/commas.css" media="screen" rel="stylesheet" type="text/css" />
+			{% endaddtoblock %}
+		{% endif %}
+		{% render_block "css" %}
+		<link href="https://dl.dropboxusercontent.com/u/462142/css/commas.css" media="screen" rel="stylesheet" type="text/css" />
+		<link href="https://dl.dropboxusercontent.com/u/25350334/commas-design/style.css" media="screen" rel="stylesheet" type="text/css" />
+		<style type="text/css">
+		{% show_placeholder "the_css" "general" %}
+		</style>
+		<style type="text/css">
+		{% placeholder "the_css" %}
+		</style>
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+		<!--[if lt IE 9]>
+				<script src="{{STATIC_URL}}js/html5shiv.js"></script>
+				<script src="{{STATIC_URL}}js/respond.min.js"></script>
+		<![endif]-->
+		<!-- Custom styles for this template -->
+		<!-- <link href="{{ STATIC_URL }}css/carousel.css" rel="stylesheet"> -->
 
 
 
 
 
 
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% static "zinnia_bootstrap/bootstrap/ico/apple-touch-icon-144-precomposed.png" %}" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{% static "zinnia_bootstrap/bootstrap/ico/apple-touch-icon-114-precomposed.png" %}" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% static "zinnia_bootstrap/bootstrap/ico/apple-touch-icon-72-precomposed.png" %}" />
-    <link rel="apple-touch-icon-precomposed" href="{% static "zinnia_bootstrap/bootstrap/ico/apple-touch-icon-57-precomposed.png" %}" />
+
+
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% static "zinnia_bootstrap/bootstrap/ico/apple-touch-icon-144-precomposed.png" %}" />
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{% static "zinnia_bootstrap/bootstrap/ico/apple-touch-icon-114-precomposed.png" %}" />
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% static "zinnia_bootstrap/bootstrap/ico/apple-touch-icon-72-precomposed.png" %}" />
+		<link rel="apple-touch-icon-precomposed" href="{% static "zinnia_bootstrap/bootstrap/ico/apple-touch-icon-57-precomposed.png" %}" />
 
 
 
 
 
-    {% block extra_link %}{% endblock %}
-    {% block link %}{% endblock %}
-    {% block extra_css %}{% endblock %}
-    {% block script %}{% endblock %}
-  </head>
-  <body class="{% block body-class %}normal{% endblock body-class %}" >
-    {% cms_toolbar %}
-    {% block base_header %}
-    <div class="navbar navbar-inverse navbar-fixed-top main-navbar margin-zero {% block navbar_class %}{% endblock %}">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          
-          <a class="navbar-brand brand-horizontal" href="http://commasindustry.com">{% show_uncached_placeholder "main_logo" "general" %}</a>
-          
-        </div>
+		{% block extra_link %}{% endblock %}
+		{% block link %}{% endblock %}
+		{% block extra_css %}{% endblock %}
+		{% block script %}{% endblock %}
+	</head>
+	<body class="{% block body-class %}normal{% endblock body-class %}" >
+		{% cms_toolbar %}
+		{% block base_header %}
+		<div class="navbar navbar-inverse navbar-fixed-top main-navbar margin-zero {% block navbar_class %}{% endblock %}">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					
+					<a class="navbar-brand brand-horizontal" href="http://commasindustry.com">{% show_uncached_placeholder "main_logo" "general" %}</a>
+					
+				</div>
 
-        <div class="pull-right social-links" >
-        {%show_placeholder "social-links" "general" %}
-        </div>
-        <div class="navbar-collapse collapse navbar-right">
-          <ul class="nav navbar-nav">
-              {% show_menu 0 100 100 100 "menu.html" %}
-          </ul>
-        </div><!--/.navbar-collapse -->
-
-
-
-      </div><!--/.container -->
-    </div>
-    <div class="navbar-magic-bg"></div>
-    {% endblock base_header%}
-
-    {% block base_content %}{% endblock %}
-
-    {% block base_footer %}
-    <div id="contact-form" class="footer">
-      <div class="container margin-first" >
-        <footer>
-          <div class="row">
-            <h2 class="title-contact no-margins col-sm-12"> {% show_placeholder "contact_title" "contact" %}</h2>
-            <div name="contact-form" class="col-sm-6 col-sm-offset-3">
-            <div class="teaser-contact">{% show_placeholder "contact_teaser" "contact" %}</div>
-              {% show_placeholder "customcontactform" "contact" %}
-            </div>
-            <div class="col-sm-6 col-sm-offset-3 info-contact">
-                {% show_placeholder "contactinfo" "contact" %}
-            </div>
-          </div> <!-- row -->
-        </footer>
-      </div> <!-- /.container -->
-    </div> <!-- /.footer -->
-    {% endblock %}
+				<div class="pull-right social-links" >
+				{%show_placeholder "social-links" "general" %}
+				</div>
+				<div class="navbar-collapse collapse navbar-right">
+					<ul class="nav navbar-nav">
+							{% show_menu 0 100 100 100 "menu.html" %}
+					</ul>
+				</div><!--/.navbar-collapse -->
 
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="//code.jquery.com/jquery.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="{{STATIC_URL}}js/bootstrap.min.js"></script>
-    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-    <script src="{{STATIC_URL}}js/holder.js"></script>
-    
-    {% render_block "js" %}
-  </body>
+			</div><!--/.container -->
+		</div>
+		<div class="navbar-magic-bg"></div>
+		{% endblock base_header%}
+
+		{% block base_content %}{% endblock %}
+
+		{% block base_footer %}
+		<div id="contact-form" class="footer">
+			<div class="container margin-first" >
+				<footer>
+					<div class="row">
+						<h2 class="title-contact no-margins col-sm-12"> {% show_placeholder "contact_title" "contact" %}</h2>
+						<div name="contact-form" class="col-sm-6 col-sm-offset-3">
+						<div class="teaser-contact">{% show_placeholder "contact_teaser" "contact" %}</div>
+							{% show_placeholder "customcontactform" "contact" %}
+						</div>
+						<div class="col-sm-6 col-sm-offset-3 info-contact">
+								{% show_placeholder "contactinfo" "contact" %}
+						</div>
+					</div> <!-- row -->
+				</footer>
+			</div> <!-- /.container -->
+		</div> <!-- /.footer -->
+		{% endblock %}
+
+
+
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="//code.jquery.com/jquery.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="{{STATIC_URL}}js/bootstrap.min.js"></script>
+		<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+		<script src="{{STATIC_URL}}js/holder.js"></script>
+		{% render_block "js" %}
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('.carousel').carousel({
+			interval: 0
+		});
+		$('.carousel').carousel('cycle');
+	});
+</script>  
+	</body>
 </html>
 
