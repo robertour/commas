@@ -25,6 +25,8 @@ class Reference(CMSPlugin):
 class Service(CMSPlugin):
     name = models.CharField(max_length=100, default='Name')
     description = models.TextField(default='Description')
+    image = models.ImageField(blank=True, null=True, upload_to='services')
+
 
 
 class Team(CMSPlugin):
