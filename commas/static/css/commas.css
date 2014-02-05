@@ -5439,12 +5439,20 @@ body {
   margin-bottom: 1em;
 }
 #services {
-  margin-top: 0px;
-  margin-bottom: 125px;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 #services .service {
-  padding-left: 25px;
-  padding-right: 25px;
+  padding: 25px;
+}
+#services .image-container {
+  text-align: center;
+  margin: 0 auto;
+  width: 50px;
+  height: 75px;
+}
+#services .service h2 {
+  text-align: center;
 }
 #blog {
   margin-top: 125px;
