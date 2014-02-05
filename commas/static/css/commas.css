@@ -5440,7 +5440,7 @@ body {
   margin-right: 40px;
 }
 .service-header {
-  margin-bottom: 6em;
+  margin-bottom: 5.5em;
 }
 .big-header.service-header {
   height: auto;
@@ -5463,7 +5463,13 @@ body {
   text-align: center;
   margin: 0 auto;
   width: 50px;
-  height: 75px;
+  height: 70px;
+  position: relative;
+  margin-bottom: 25px;
+}
+#services .image-container img {
+  position: absolute;
+  bottom: 0;
 }
 #services .service h2 {
   text-align: center;
