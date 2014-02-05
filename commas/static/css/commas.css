@@ -5236,18 +5236,19 @@ body {
   z-index: 50;
   overflow: hidden;
   height: 75vh;
-  min-height: 300px;
+  min-height: 475px;
   margin-bottom: 5.6em;
 }
 .big-header img {
-  max-width: 100%;
+  min-width: 100%;
   height: auto;
   width: auto\9;
   /* ie8 */
 
   position: absolute;
-  min-height: 320px;
-  min-height: 75vh;
+  min-height: 475px;
+  /*min-height: 75vh;*/
+
 }
 .btn-default {
   font-size: 0.85em;
@@ -5398,6 +5399,9 @@ body {
     width: 60%;
     padding: 10px 0;
   }
+  #home h1 {
+    margin: 0 10px;
+  }
 }
 #featurettes {
   margin-top: 125px;
@@ -5436,10 +5440,20 @@ body {
   margin-right: 40px;
 }
 .service-header {
-  margin-bottom: 1em;
+  margin-bottom: 6em;
+}
+.big-header.service-header {
+  height: auto;
+}
+.big-header.service-header img {
+  position: static;
+  max-height: 75vh;
+}
+.big-header.service-header,
+.big-header.service-header img {
+  min-height: 250px;
 }
 #services {
-  margin-top: 100px;
   margin-bottom: 100px;
 }
 #services .service {
@@ -5579,6 +5593,17 @@ body {
 .about-header {
   margin-bottom: 6.5em;
 }
+.big-header.about-header {
+  height: auto;
+}
+.big-header.about-header img {
+  position: static;
+  max-height: 75vh;
+}
+.big-header.about-header,
+.big-header.about-header img {
+  min-height: 250px;
+}
 #about {
   margin-bottom: 50px;
 }
@@ -5640,6 +5665,14 @@ body {
     padding-left: 5% !important;
     padding-right: 5% !important;
   }
+}
+/* Portrait */
+@media screen and (orientation: portrait) {
+  /* Portrait styles */
+}
+/* Landscape */
+@media screen and (orientation: landscape) {
+  /* Landscape styles */
 }
 input[type=text].form-control {
   height: 24px;
