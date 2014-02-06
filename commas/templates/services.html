@@ -2,8 +2,11 @@
 {% load cms_tags %}
 
 {% block base_content %}
-<div class="big-header service-header">
+<div class="big-header home-header">
   {% placeholder service-image-header %}
+	<div class="home-teaser">
+		{% show_placeholder "home-teaser" "home" %}
+	</div>
 </div>
 <div id="services" class="container marketing base-content margin-first">
   <!-- Three columns of text below the carousel -->
