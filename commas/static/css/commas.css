@@ -5236,7 +5236,8 @@ body {
   z-index: 50;
   overflow: hidden;
   height: 75vh;
-  min-height: 475px;
+  max-height: 75vh;
+  min-height: 75vh;
   margin-bottom: 5.6em;
 }
 .big-header img {
@@ -5246,7 +5247,9 @@ body {
   /* ie8 */
 
   position: absolute;
-  min-height: 475px;
+  height: 75vh;
+  max-height: 75vh;
+  min-height: 75vh;
   /*min-height: 75vh;*/
 
 }
@@ -5326,7 +5329,8 @@ body {
 @media screen and (orientation: landscape) {
   /* Landscape styles */
   .big-header img {
-    top: -20vh;
+    /*top: -20vh;*/
+  
   }
 }
 #home h1 {
@@ -5443,15 +5447,22 @@ body {
   margin-bottom: 5.5em;
 }
 .big-header.service-header {
-  height: auto;
+  /*height: auto;*/
+
+  max-height: 75vh;
+  min-height: 0;
+  height: 75vh;
 }
 .big-header.service-header img {
   position: static;
   max-height: 75vh;
+  min-height: 0;
+  height: 75vh;
 }
 .big-header.service-header,
 .big-header.service-header img {
-  min-height: 250px;
+  /*min-height:250px;*/
+
 }
 #services {
   margin-bottom: 100px;
@@ -5600,15 +5611,24 @@ body {
   margin-bottom: 6.5em;
 }
 .big-header.about-header {
-  height: auto;
+  /*height: auto;*/
+
+  max-height: 75vh;
+  min-height: 0;
+  height: 75vh;
 }
 .big-header.about-header img {
   position: static;
   max-height: 75vh;
+  min-height: 0;
+  height: 75vh;
+  /*max-height: 75vh;*/
+
 }
 .big-header.about-header,
 .big-header.about-header img {
-  min-height: 250px;
+  /*min-height:250px;*/
+
 }
 #about {
   margin-bottom: 50px;
