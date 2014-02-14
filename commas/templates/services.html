@@ -3,15 +3,15 @@
 
 {% block base_content %}
 <div class="big-header home-header">
-  {% placeholder service-image-header %}
+	{% placeholder service-image-header %}
 	<div class="home-teaser">
-		{% show_placeholder "home-teaser" "home" %}
+		{% placeholder "service-teaser" %}
 	</div>
 </div>
 <div id="services" class="container marketing base-content margin-first">
-  <!-- Three columns of text below the carousel -->
-  <div class="row">
-  {% placeholder service %}
-  </div><!-- /.row -->
+	<!-- Three columns of text below the carousel -->
+	<div class="row">
+	{% placeholder service %}
+	</div><!-- /.row -->
 </div><!-- /.container -->
 {% endblock %}

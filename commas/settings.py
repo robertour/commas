@@ -316,6 +316,9 @@ CMS_PLACEHOLDER_CONF = {
     'home-teaser': {
         'plugins': { 'TextPlugin', 'EditorTextPlugin' }
     },
+    'service-teaser': {
+        'plugins': { 'TextPlugin', 'EditorTextPlugin' }
+    },
     'social-share': {
         'plugins': { 'TextPlugin' }
     },
