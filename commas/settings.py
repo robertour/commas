@@ -220,6 +220,8 @@ INSTALLED_APPS = (
     #'cms.plugins.video',
     #'cms.plugins.twitter',
     'easy_thumbnails',
+    'sorl.thumbnail',
+    'django_jcrop',
     'filer',
     'cmsplugin_filer_file',
     'cmsplugin_filer_folder',

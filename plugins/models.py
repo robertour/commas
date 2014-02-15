@@ -1,4 +1,5 @@
 from cms.models.pluginmodel import CMSPlugin
+from django_jcrop.models import JCropImageField
 
 from django.db import models
 
@@ -41,8 +42,7 @@ class Member(CMSPlugin):
         verbose_name="Bios")
     twitter = models.URLField(max_length=200, default='http://twitter.com',
         verbose_name="Twitter URL")
-    image = models.ImageField(upload_to='members', 
-        default='img/person-placeholder.jpg')
+    image = JCropImageField(upload_to='members', blank=True)
 
 
 class Widget(CMSPlugin):
