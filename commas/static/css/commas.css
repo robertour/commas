@@ -5116,6 +5116,18 @@ body {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#00000000', GradientType=1);
 }
+.carousel-control img {
+  margin-top: 70px;
+  width: 36px;
+}
+.carousel-control.left {
+  text-align: right;
+  padding-right: 340px;
+}
+.carousel-control.right {
+  text-align: left;
+  padding-left: 340px;
+}
 .carousel-inner {
   overflow: inherit;
 }
@@ -5147,15 +5159,37 @@ body {
     line-height: 1.4;
   }
 }
+@media screen and (max-width: 800px) {
+  .carousel-caption {
+    width: 70%;
+  }
+  .carousel-control img {
+    width: 32px;
+  }
+  .carousel-control.left {
+    text-align: left;
+    padding: 0 0 0 30px;
+  }
+  .carousel-control.right {
+    text-align: right;
+    padding: 0 30px 0 0;
+  }
+}
 @media screen and (max-width: 600px) {
   .carousel {
     min-height: 310px;
   }
-  .carousel-caption {
-    width: 80%;
-  }
   .carousel .big-quote {
     font-size: 7em;
+  }
+  .carousel-control img {
+    width: 28px;
+  }
+  .carousel-control.left {
+    padding: 0 0 0 15px;
+  }
+  .carousel-control.right {
+    padding: 0 15px 0 0;
   }
 }
 @media screen and (max-width: 480px) {
@@ -5163,7 +5197,6 @@ body {
     min-height: 360px;
   }
   .carousel-caption {
-    width: 80%;
     font-size: 14px;
   }
   .carousel .item .client {
@@ -5172,6 +5205,15 @@ body {
   }
   .carousel .big-quote {
     font-size: 5em;
+  }
+  .carousel-control img {
+    width: 24px;
+  }
+  .carousel-control.left {
+    padding: 0 0 0 5px;
+  }
+  .carousel-control.right {
+    padding: 0 5px 0 0;
   }
 }
 body {

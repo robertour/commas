@@ -1,14 +1,13 @@
 {% load cms_tags %}
 
 <div class="item {% if instance.active %}active{% endif %}">
-		
-  <div class="container">
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-    <div class="carousel-caption">
-      <p><span class="big-quote open-quote">“</span>{{ instance.description }}<span class="big-quote close-quote">”</span></p>
-      <span class="client"> <span class="dash">—</span> {{ instance.referee}}.</span>
-    </div>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-  </div>
-  		
+	<div class="container">
+	<a class="left carousel-control" href="#myCarousel" data-slide="prev"><img src="{{ STATIC_URL }}img/icons/left.png"></a>
+		<div class="carousel-caption">
+			<p><span class="big-quote open-quote">“</span>{{ instance.description }}<span class="big-quote close-quote">”</span></p>
+			<span class="client"> <span class="dash">—</span> {{ instance.referee}}.</span>
+		</div>
+		<a class="right carousel-control" href="#myCarousel" data-slide="next"><img src="{{ STATIC_URL }}img/icons/right.png"></a>
+	</div>
+			
 </div>
