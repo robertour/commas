@@ -15,3 +15,4 @@ django-widget-tweaks
 django-avatar
 django-disqus
 django-tinymce
+django-jcrop
