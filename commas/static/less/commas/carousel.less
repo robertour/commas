@@ -115,7 +115,13 @@ height: 275px;
 .carousel-control {
 width: 50%;
 z-index: 0;
+opacity: 0.15;
 }
+
+.carousel-control:hover {
+opacity: 1;
+}
+
 
 .carousel-indicators{
 z-index: 100;
@@ -191,7 +197,7 @@ color: rgb(180,180,180);
 font-size: 5em;
 }
 .carousel-control img{
-width: 24px;
+width: 22px;
 }
 .carousel-control.left{
 padding: 0 0 0 5px;
@@ -200,3 +206,18 @@ padding: 0 0 0 5px;
 padding: 0 5px 0 0;
 }
 }
+
+
+@media screen and (max-width: 260px ) {
+.carousel-control img{
+width: 16px;
+}
+.carousel-control.left{
+padding: 0 0 0 1px;
+}
+.carousel-control.right{
+padding: 0 1px 0 0;
+}
+}
+
+
