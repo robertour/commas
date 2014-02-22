@@ -5118,7 +5118,7 @@ body {
 }
 .carousel-control img {
   margin-top: 70px;
-  width: 36px;
+  width: 28px;
 }
 .carousel-control.left {
   text-align: right;
@@ -5168,7 +5168,7 @@ body {
     width: 70%;
   }
   .carousel-control img {
-    width: 32px;
+    width: 26px;
   }
   .carousel-control.left {
     text-align: left;
@@ -5187,7 +5187,7 @@ body {
     font-size: 7em;
   }
   .carousel-control img {
-    width: 28px;
+    width: 22px;
   }
   .carousel-control.left {
     padding: 0 0 0 15px;
@@ -5211,7 +5211,7 @@ body {
     font-size: 5em;
   }
   .carousel-control img {
-    width: 22px;
+    width: 18px;
   }
   .carousel-control.left {
     padding: 0 0 0 5px;
@@ -5222,7 +5222,7 @@ body {
 }
 @media screen and (max-width: 260px) {
   .carousel-control img {
-    width: 16px;
+    width: 14px;
   }
   .carousel-control.left {
     padding: 0 0 0 1px;
