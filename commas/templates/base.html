@@ -138,12 +138,13 @@
 		<script src="{{STATIC_URL}}js/holder.js"></script>
 		{% render_block "js" %}
 <script type="text/javascript">
-	$(document).ready(function () {
-		$('.carousel').carousel({
-			interval: 0
+		$(document).ready(function () {
+			$('.carousel').carousel({
+				interval: 0
+			});
+			$('.carousel').carousel('cycle');
+			$('.tree-toggle').click(function () {$(this).parent().children('ul.tree').toggle(200);});
 		});
-		$('.carousel').carousel('cycle');
-	});
 </script>  
 	</body>
 </html>

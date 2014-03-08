@@ -5318,6 +5318,7 @@ body {
   min-width: 115px;
   /*responsive limit*/
 
+  font-weight: normal;
 }
 .btn-default:hover {
   background-color: black;
@@ -5406,7 +5407,7 @@ body {
 }
 .home-header .home-teaser h1 {
   margin: 0;
-  font-size: 3.5em;
+  font-size: 3em;
 }
 .home-header .home-teaser p {
   margin: 1.4em 0;
@@ -5526,7 +5527,12 @@ body {
   margin-bottom: 100px;
 }
 #services .service {
-  padding: 25px;
+  padding: 25px 0px;
+}
+#services ul {
+  list-style-type: none;
+  padding-left: 0px;
+  text-align: center;
 }
 #services .image-container {
   text-align: center;
@@ -5574,6 +5580,9 @@ body {
   margin-top: 3px;
   font-size: 14px;
 }
+#blog .entry-info .media {
+  height: 4em;
+}
 #blog .container {
   margin-top: 2em;
 }
@@ -5611,16 +5620,21 @@ body {
 #blog article.hentry:last-of-type .entry-footer {
   border: 0;
 }
+#blog .breadcrumb {
+  display: none;
+}
 #blog #sidebar {
-  padding-top: 9.0em;
   padding-right: 0em;
   padding-left: 5.0em;
+}
+#blog #sidebar .form-control {
+  border: 1px solid #cccccc;
 }
 #blog #sidebar .panel-default {
   border: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
-  font-size: 1.1em;
+  font-size: 1em;
 }
 #blog #sidebar .panel-default > .panel-heading {
   border: 0;
@@ -5798,6 +5812,11 @@ footer .btn-lg {
 }
 .info-contact {
   padding-bottom: 0.2em;
+}
+@media screen and (max-width: 600px) {
+  div.teaser-contact {
+    margin: 0.5em 1em;
+  }
 }
 @media (min-width: 600px) {
   .margin-zero {

@@ -1,19 +1,22 @@
 {% load i18n %}
 {% load url from future %}
 {% regroup archives by year as year_list %}
+
 <ul>
-  {% for year in year_list %}
+  {% for year in year_list reversed %}
   <li>
-    <a title="{% trans "Archives" %} {{ year.grouper }}" rel="archives"
-       href="{% url 'zinnia_entry_archive_year' year.grouper %}">{{ year.grouper }}</a>
+<!--    <a title="{% trans "Archives" %} {{ year.grouper }}" rel="archives"-->
+<!--       href="{% url 'zinnia_entry_archive_year' year.grouper %}"></a>-->
+    <label class="tree-toggle" label-default="">{{ year.grouper }}</label>
+
     {% regroup year.list by month as month_list %}
-    <ul>
-      {% for month in month_list %}
+    <ul class="tree" {% if not forloop.first %} style="display: none" {% endif %}>
+      {% for month in month_list reversed %}
       <li>
         {% with month_date=month.list.0 %}
         <a title="{% trans "Archives" %} {{ month_date|date:"YEAR_MONTH_FORMAT" }}" rel="archives"
            href="{% url 'zinnia_entry_archive_month' month_date|date:"Y" month_date|date:"m" %}">
-          {{ month_date|date:"M" }}
+          {{ month_date|date:"F" }}
         </a>
         {% endwith %}
       </li>

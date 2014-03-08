@@ -281,7 +281,8 @@ CMS_TEMPLATES = (
     ('credentials.html', 'Credentials'),
     ('home.html', 'Home'),
     ('contact.html', 'Contact'),
-    ('general.html', 'General')
+    ('general.html', 'General'),
+    ('sidebar.html', 'Sidebar')
 )
 
 CMS_PLACEHOLDER_CONF = {
@@ -383,7 +384,16 @@ TINYMCE_DEFAULT_CONFIG = {
     'theme' : "advanced",
     'mode' : "textareas",
     'width' : "100%",
-    'relative_urls': False
+    'height': '500',
+    'relative_urls': False,
+    'theme_advanced_resizing': True,
+    'plugins': '    fullscreen',
+    'theme_advanced_buttons3_add': "fullscreen",
+    'fullscreen_new_window': True,
+    'fullscreen_settings': {
+        'theme_advanced_path_location': 'top'
+    }
+
 }
 
 #ZINNIA
