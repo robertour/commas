@@ -8,7 +8,9 @@
     <h3>{{ instance.title }}</h3>
   </div>
   <p>{{ instance.description }}</p>
-  <a href="{{ instance.twitter }}"><img id="twitter" src="{{ STATIC_URL }}img/icons/commas/72px/twitter-blue.png" /></a>
+  {% for link in instance.associated_link.all %}
+    <a href="{{ link.url }}" alt="{{ link.social_network }}"><img id="{{ link.social_network }}" class="social-icon" src="{{ link.icon.url }}" /></a>
+  {% endfor %}
   <!--<p><a class="btn btn-default" href="#">View details &raquo;</a></p> -->
 </div>
 

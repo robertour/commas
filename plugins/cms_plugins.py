@@ -3,8 +3,9 @@ from cms.plugin_pool import plugin_pool
 from django.utils.translation import ugettext_lazy as _
 from cms.plugins.text.models import Text
 from cms.plugins.text.cms_plugins import TextPlugin as TextPluginCMS
+from django.contrib.admin import TabularInline
 
-from models import Credential, Reference, Service, Team, Member, Widget
+from models import Credential, Reference, Service, Team, Member, Widget, SocialLink
 
 
 class CredentialPlugin(CMSPluginBase):
@@ -58,6 +59,9 @@ class TeamPlugin(CMSPluginBase):
 
 plugin_pool.register_plugin(TeamPlugin)
 
+class SocialLinkInline(TabularInline):
+    model = SocialLink
+    extra = 1
 
 class MemberPlugin(CMSPluginBase):
     model = Member
@@ -68,6 +72,8 @@ class MemberPlugin(CMSPluginBase):
     def render(self, context, instance, placeholder):
         context['instance'] = instance
         return context
+
+    inlines = [SocialLinkInline]
 
 plugin_pool.register_plugin(MemberPlugin)
 
