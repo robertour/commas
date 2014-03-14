@@ -196,6 +196,8 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable the admin:
     # 'django_admin_bootstrapped',
     # 'bootstrap_admin',
+    'admin_shortcuts',
+    'djangocms_admin_style',
     'django.contrib.admin',
     'django.contrib.sitemaps',
     # Uncomment the next line to enable admin documentation:
@@ -409,6 +411,30 @@ CMSPLUGIN_CONTACT_FORMS = (
     ('cmsplugin_contact.forms.ContactForm', 'default'),
     ('forms.ContactFormy', 'My form'),
 )
+
+ADMIN_SHORTCUTS = [
+    {
+        'title': 'Commas & Industry',
+        'shortcuts': [
+            {
+                'url_name': 'admin:zinnia_entry_add',
+                'title': 'Add Post',
+            },
+            {
+                'url_name': 'admin:zinnia_entry_changelist',
+                'title': 'List Posts',
+            },
+            {
+                'url_name': 'admin:cms_page_changelist',
+                'title': 'List Pages',
+            },
+            {
+                'url_name': 'admin:filer_folder_changelist',
+                'title': 'Browse Files',
+            },
+        ]
+    },
+]
 
 #TINYMCE_JS_URL = os.path.join(MEDIA_ROOT, "js/tiny_mce/tiny_mce.js")
 #TINYMCE_JS_ROOT = os.path.join(STATIC_ROOT, "js/tiny_mce")

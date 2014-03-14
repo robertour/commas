@@ -1,12 +1,13 @@
-django-cms
+django-cms==1.5.5
 #bootstrap-admin
+easy-thumbnails==1.4
 django-compressor
 django-filer
 cmsplugin-filer
-django-reversion
+django-reversion==1.7
 pillow
 #-e git+https://github.com/fivethreeo/cmsplugin-blog.git#egg=cmsplugin-blog
-django-blog-zinnia
+django-blog-zinnia==0.13.1
 cmsplugin_zinnia
 zinnia-theme-bootstrap
 django-app-namespace-template-loader
@@ -15,4 +16,6 @@ django-widget-tweaks
 django-avatar
 django-disqus
 django-tinymce
-django-jcrop
+#django-jcrop
+-e git+https://github.com/mauler/django-jcrop.git#egg=django-jcrop
+
