@@ -50,6 +50,10 @@ width: 24px;
 height: 24px;
 }
 
+ul.nav.navbar-nav {
+text-transform: uppercase;
+}
+
 .brand-horizontal img{
 margin: 10px 0;
 height: 55px;
@@ -68,26 +72,57 @@ background-color: rgb(238, 238, 238);
 background-color: rgba(238, 238, 238, 0.9);
 }
 
+.the-opaque{
+background-color:#FFFFFF; 
+opacity:0.2; 
+height: 100%;
+}
+.the-absolute{
+position:absolute; 
+top:0; 
+width:100%
+}
+
+.commas-header .commas-teaser{
+position: relative;
+z-index: 60;
+margin: 120px auto 1.4em ;
+width: 400px;
+color: @text-color;
+text-align: center;
+}
+
+.commas-header .commas-teaser h1{
+margin: 0;
+font-size: 2em;
+}
+
+.commas-header .commas-teaser p{
+margin: 1.4em 0;
+font-size: 1.4em;
+}
+
+.commas-header .commas-teaser .btn-default {
+margin: 0 0.2em;
+font-weight: normal;
+}
+
 .big-header {
 position: relative;
 z-index: 50;
 overflow: hidden;
 height: 75vh;
 max-height: 75vh;
-min-height: 75vh;
+min-height: 350px;
 margin-bottom: 5.6em;
 }
 
-.big-header img{
-min-width: 100%;
-height: auto;
-width: auto\9; /* ie8 */
-position: absolute;
-height: 75vh;
-max-height: 75vh;
-min-height: 75vh;
-/*min-height: 75vh;*/
+.big-header{
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center center;
 }
+
 
 .btn-default{
 font-size: 0.85em;
@@ -101,6 +136,10 @@ font-weight: normal;
 .btn-default:hover{
 background-color: black;
 color: white;
+}
+
+.teaser-contact {
+text-align: left
 }
 
 
@@ -165,6 +204,11 @@ box-shadow: none;
 }
 }
 
+@media screen and (max-width: 800px){
+.the-opaque {
+opacity: 0.35;
+}
+}
 
 
 
@@ -172,10 +216,9 @@ box-shadow: none;
 @media screen and (orientation:portrait) {
 /* Portrait styles */
 }
-/* Landscape */
-@media screen and (orientation:landscape) {
-/* Landscape styles */
-.big-header img{
-/*top: -20vh;*/
-}
+
+/* Landscape > 800px*/
+
+
+@media screen and (orientation:landscape) and (min-width: 799px){
 }

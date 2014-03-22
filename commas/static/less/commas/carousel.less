@@ -86,8 +86,12 @@ color: black;
 }
 .carousel-control img{
 margin-top: 70px;
-width: 28px;
+width: 15px;
 }
+a:hover .carousel-control img{
+color: #F6978F;
+}
+
 .carousel-control.left{
 text-align: right;
 padding-right: 340px;
@@ -161,6 +165,9 @@ padding: 0 0 0 30px;
 text-align: right;
 padding: 0 30px 0 0;
 }
+.big-header.commas-header {
+min-height: 350px;
+}
 }
 
 @media screen and (max-width: @screen-small ) {
@@ -208,6 +215,12 @@ padding: 0 5px 0 0;
 }
 
 
+@media screen and (max-width: 310px ) {
+.big-header.commas-header {
+min-height: 400px;
+}
+}
+
 @media screen and (max-width: 260px ) {
 .carousel-control img{
 width: 14px;
@@ -218,6 +231,11 @@ padding: 0 0 0 1px;
 .carousel-control.right{
 padding: 0 1px 0 0;
 }
+.big-header.commas-header {
+min-height: 450px;
 }
+}
+
+
 
 

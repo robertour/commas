@@ -1,13 +1,16 @@
 {% extends "base.html" %}
 {% load cms_tags %}
 {% block navbar_class %}home-navbar{% endblock %}
+
 {% block base_content %}
 
 <div id="home">
-	<div class="big-header home-header">
-		{% placeholder home-background-image %}
-		<div class="home-teaser">
-			{% placeholder home-teaser %}
+	<div class="big-header commas-header home-header" style="background-image: url({% placeholder home-background-image %}); position: relative">
+		<div class="the-opaque"></div>
+		<div class="the-absolute">
+			<div class="commas-teaser">
+				{% placeholder home-teaser %}
+			</div>
 		</div>
 	</div>
 	<h1>{% placeholder reference-title %}</h1>

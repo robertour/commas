@@ -2,10 +2,12 @@
 {% load cms_tags %}
 
 {% block base_content %}
-<div class="big-header home-header">
-	{% placeholder service-image-header %}
-	<div class="home-teaser">
-		{% placeholder "service-teaser" %}
+<div class="big-header commas-header service-header" style="background-image: url({% placeholder service-image-header %})">
+	<div class="the-opaque"></div>
+	<div class="the-absolute">
+		<div class="commas-teaser services-teaser">
+			{% placeholder "service-teaser" %}
+		</div>
 	</div>
 </div>
 <div id="services" class="container marketing base-content margin-first">

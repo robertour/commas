@@ -5118,7 +5118,10 @@ body {
 }
 .carousel-control img {
   margin-top: 70px;
-  width: 28px;
+  width: 15px;
+}
+a:hover .carousel-control img {
+  color: #F6978F;
 }
 .carousel-control.left {
   text-align: right;
@@ -5178,6 +5181,9 @@ body {
     text-align: right;
     padding: 0 30px 0 0;
   }
+  .big-header.commas-header {
+    min-height: 350px;
+  }
 }
 @media screen and (max-width: 600px) {
   .carousel {
@@ -5220,6 +5226,11 @@ body {
     padding: 0 5px 0 0;
   }
 }
+@media screen and (max-width: 310px) {
+  .big-header.commas-header {
+    min-height: 400px;
+  }
+}
 @media screen and (max-width: 260px) {
   .carousel-control img {
     width: 14px;
@@ -5229,6 +5240,9 @@ body {
   }
   .carousel-control.right {
     padding: 0 1px 0 0;
+  }
+  .big-header.commas-header {
+    min-height: 450px;
   }
 }
 body {
@@ -5270,6 +5284,9 @@ body {
   width: 24px;
   height: 24px;
 }
+ul.nav.navbar-nav {
+  text-transform: uppercase;
+}
 .brand-horizontal img {
   margin: 10px 0;
   height: 55px;
@@ -5288,27 +5305,49 @@ body {
 
   background-color: rgba(238, 238, 238, 0.9);
 }
+.the-opaque {
+  background-color: #FFFFFF;
+  opacity: 0.2;
+  height: 100%;
+}
+.the-absolute {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.commas-header .commas-teaser {
+  position: relative;
+  z-index: 60;
+  margin: 120px auto 1.4em ;
+  width: 400px;
+  color: #333333;
+  text-align: center;
+}
+.commas-header .commas-teaser h1 {
+  margin: 0;
+  font-size: 2em;
+}
+.commas-header .commas-teaser p {
+  margin: 1.4em 0;
+  font-size: 1.4em;
+}
+.commas-header .commas-teaser .btn-default {
+  margin: 0 0.2em;
+  font-weight: normal;
+}
 .big-header {
   position: relative;
   z-index: 50;
   overflow: hidden;
   height: 75vh;
   max-height: 75vh;
-  min-height: 75vh;
+  min-height: 350px;
   margin-bottom: 5.6em;
 }
-.big-header img {
-  min-width: 100%;
-  height: auto;
-  width: auto\9;
-  /* ie8 */
-
-  position: absolute;
-  height: 75vh;
-  max-height: 75vh;
-  min-height: 75vh;
-  /*min-height: 75vh;*/
-
+.big-header {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 .btn-default {
   font-size: 0.85em;
@@ -5323,6 +5362,9 @@ body {
 .btn-default:hover {
   background-color: black;
   color: white;
+}
+.teaser-contact {
+  text-align: left;
 }
 @media screen and (max-width: 799px) {
   body {
@@ -5380,42 +5422,22 @@ body {
     box-shadow: none;
   }
 }
+@media screen and (max-width: 800px) {
+  .the-opaque {
+    opacity: 0.35;
+  }
+}
 /* Portrait */
 @media screen and (orientation: portrait) {
   /* Portrait styles */
 }
-/* Landscape */
-@media screen and (orientation: landscape) {
-  /* Landscape styles */
-  .big-header img {
-    /*top: -20vh;*/
+/* Landscape > 800px*/
+@media screen and (orientation: landscape) and (min-width: 799px) {
   
-  }
 }
 #home h1 {
   text-align: center;
-  font-size: 28px;
-  margin-bottom: 40px;
-}
-.home-header .home-teaser {
-  position: relative;
-  z-index: 60;
-  margin: 12% auto 0;
-  width: 500px;
-  color: #333333;
-  text-align: center;
-}
-.home-header .home-teaser h1 {
-  margin: 0;
-  font-size: 3em;
-}
-.home-header .home-teaser p {
-  margin: 1.4em 0;
-  font-size: 1.4em;
-}
-.home-header .home-teaser .btn-default {
-  margin: 0 0.2em;
-  font-weight: normal;
+  margin-bottom: 0.3em;
 }
 .flex-video {
   position: relative;
@@ -5445,18 +5467,18 @@ body {
   }
 }
 @media screen and (max-width: 799px) {
-  .home-header .home-teaser {
+  .commas-header .commas-teaser {
     width: auto;
     margin: 100px 10px 0;
   }
 }
 @media screen and (max-width: 480px) {
-  .home-header .home-teaser .btn-default {
+  .commas-header .commas-teaser .btn-default {
     width: 47%;
   }
 }
 @media screen and (max-width: 310px) {
-  .home-header .home-teaser .btn-default {
+  .commas-header .commas-teaser .btn-default {
     margin: 20px auto;
     display: block;
     width: 60%;
@@ -5505,23 +5527,13 @@ body {
 .service-header {
   margin-bottom: 5.5em;
 }
-.big-header.service-header {
-  /*height: auto;*/
-
-  max-height: 75vh;
-  min-height: 0;
-  height: 75vh;
+.service-header .the-opaque {
+  opacity: 0.5;
 }
-.big-header.service-header img {
-  position: static;
-  max-height: 75vh;
-  min-height: 0;
-  height: 75vh;
-}
-.big-header.service-header,
-.big-header.service-header img {
-  /*min-height:250px;*/
-
+@media screen and (max-width: 800px) {
+  .service-header .the-opaque {
+    opacity: 0.6;
+  }
 }
 #services {
   margin-bottom: 100px;
@@ -5548,6 +5560,15 @@ body {
 }
 #services .service h2 {
   text-align: center;
+}
+#services h2 {
+  font-size: 1.4em;
+}
+#services .img-responsive {
+  padding-top: 18px;
+}
+#services ul {
+  list-style-type: none;
 }
 #blog {
   margin-top: 125px;
@@ -5660,6 +5681,19 @@ body {
   border: 0;
   font-size: 15px;
 }
+#blog .margin-first {
+  margin-left: 18%;
+  margin-right: 10%;
+}
+#blog #sidebar {
+  padding-left: 80px;
+}
+#blog .entry-footer {
+  border-bottom: 1px solid #ccc;
+}
+#blog .lead {
+  margin-top: 1em;
+}
 @media (min-width: 768px) {
   #blog .lead {
     font-size: 18px;
@@ -5679,28 +5713,22 @@ body {
     margin-right: 15px;
   }
 }
+#blog #sidebar .form-control {
+  width: 12em;
+  margin-right: 0px;
+}
+.list-group .list-group-item {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#blog #sidebar .panel-default > .panel-heading {
+  font-size: 1.5em;
+}
 .about-header {
   margin-bottom: 6.5em;
 }
 .big-header.about-header {
-  /*height: auto;*/
-
-  max-height: 75vh;
-  min-height: 0;
-  height: 75vh;
-}
-.big-header.about-header img {
-  position: static;
-  max-height: 75vh;
-  min-height: 0;
-  height: 75vh;
-  /*max-height: 75vh;*/
-
-}
-.big-header.about-header,
-.big-header.about-header img {
-  /*min-height:250px;*/
-
+  background-position: center top;
 }
 #about {
   margin-bottom: 50px;
@@ -5753,6 +5781,10 @@ body {
 #members .social-icon {
   width: 32px;
   margin-top: 14px;
+}
+#members .row {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 @media (min-width: 600px) {
   #about .jumbotron {
@@ -5812,6 +5844,9 @@ footer .btn-lg {
 }
 .info-contact {
   padding-bottom: 0.2em;
+}
+.form-control {
+  border: 0px solid #cccccc;
 }
 @media screen and (max-width: 600px) {
   div.teaser-contact {

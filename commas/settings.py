@@ -307,16 +307,16 @@ CMS_PLACEHOLDER_CONF = {
         'plugins': {'MemberPlugin'}
     },
     'about-image-header': {
-        'plugins': { 'FilerImagePlugin' }
+        'plugins': { 'FilerBackgroundImage' }
     }, 
     'service-image-header': {
-        'plugins': { 'FilerImagePlugin' }
+        'plugins': { 'FilerBackgroundImage' }
     }, 
     'main_logo': {
         'plugins': {'FilerImagePlugin'}
     },
     'home-background-image': {
-        'plugins': { 'FilerImagePlugin' }
+        'plugins': { 'FilerBackgroundImage' }
     },
     'home-teaser': {
         'plugins': { 'TextPlugin', 'EditorTextPlugin' }

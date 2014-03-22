@@ -3,6 +3,7 @@ from cms.plugin_pool import plugin_pool
 from django.utils.translation import ugettext_lazy as _
 from cms.plugins.text.models import Text
 from cms.plugins.text.cms_plugins import TextPlugin as TextPluginCMS
+from cmsplugin_filer_file.cms_plugins import FilerFilePlugin
 from django.contrib.admin import TabularInline
 
 from models import Credential, Reference, Service, Team, Member, Widget, SocialLink
@@ -92,6 +93,12 @@ class EditorTextPlugin(TextPluginCMS):
 
 plugin_pool.register_plugin(EditorTextPlugin)
 
+class FilerBackgroundImage(FilerFilePlugin):
+    name = _("Background Image")
+    exclude = ['title', 'target_blank']
+    render_template = "background_image.html"
+
+plugin_pool.register_plugin(FilerBackgroundImage)
 
 class WidgetPlugin(CMSPluginBase):
     model = Widget
